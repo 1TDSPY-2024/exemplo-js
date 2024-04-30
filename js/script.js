@@ -5,6 +5,18 @@
 // var eval = nome;
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
+
+
+//Capturar o botão testar através do id com o objeto  document do DOM
+//const btnElemento = document.getElementById("botao");
+//Atrelar ao botão um evento de click
+//btnElemento.addEventListener("click", function(){
+    //console.log("Testando o botão...")
+//}//
+
+
+
+
 // Hoisting
 var nome = "Joaquim";
 
