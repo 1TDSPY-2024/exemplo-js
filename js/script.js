@@ -5,8 +5,15 @@
 // var eval = nome;
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
+//capturar o botão testar através do id com o obj doc do DOM.
+const btnElemento =  document.getElementById("botao");
+btnElemento.addEventListener("click",function(){
+    console.log
+});
+//diferença ente var e let: var=js coloca as variaveis no topo, tira do escopo em que elas estão. vai ser elevada 
+// o let respeita 
 // Hoisting
-var nome = "Joaquim";
+let nome = "Joaquim";
 
 if(true)
 {
@@ -14,6 +21,8 @@ if(true)
 }
 
 console.log(nome);
+//console.log= print
+// se var tem q colocar nome2
 //Uso estrito, orbigatótio inicialilizar.
 let estrito;
 
@@ -24,12 +33,13 @@ console.log(x);
 
 // Usando let
 let y = 20;
+y = "teste"
 console.log(y);
 
 // Usando const (constante, valor não pode ser alterado)
 const z = 30;
 console.log(z);
-// z = 20;
+// z = 20; // nao pode 
 
 // Tipos de dados em JavaScript:
 // Number
@@ -38,9 +48,10 @@ console.log(num);
 
 // String
 let str = "Olá, mundo!";
-console.log(str.charAt(0));
-console.log(str.indexOf("Olá"));
-
+console.log(str.charAt(0)); //olá mundo começa pelo 0
+console.log(str.indexOf("Olá")); //localiza onde começa a string 
+str.split //array de caracteres 
+console.log(str.replace("mundo", "pessoas"))// troca 
 // Boolean
 let bool = true;
 console.log(bool);
@@ -49,14 +60,16 @@ console.log(bool);
 let arr1 = [1, 2, 3, 4, 5];
 let arr2 = [6,7,8,9,10];
 console.log(arr1);
-console.table(arr1);
+console.table(arr1); //vira tabela, mescla os arrays 
 // Mesclar Arrays com concat()
 let arr3 = arr1.concat(arr2);
 console.log(arr3);
-// Mesclar Arrays com SPREAD
+// Mesclar Arrays com SPREAD //espalha dentro do arr inicial, antes do =
 let arr4 = [...arr1, ...arr2];
 console.log(arr4);
-
+let arr5 = ["João", "Maria", "José"];
+console.log(arr5);
+console.table(arr5);
 // Object
 let obj = { nome: "João", idade: 25, devedor: true};
 console.log(obj);
@@ -72,7 +85,7 @@ console.log("ATRIBUTO VARIADO : " + obj[atributo]);
 obj = {...obj, cidade: "São Paulo", estado: "SP"};
 console.log(obj);
 
-//DESTRUCTURING
+//DESTRUCTURING  //quebrar as propriedades do obj em propriedades para chamar sem a necessidade de chamar o obj.
 // const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
 
 // const {nome, idade, cidade} = pessoa;
@@ -247,3 +260,15 @@ if (nota >= 90) {
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+
+//<script>..</script>
+
+<script>
+    console.log("Olá Mundo!");
+
+</script>
+
+//antes de fechar o body: <script> console.warn("AVISO") </script>
+//var idade = 20;
+
+console.log("Olá ${nome}, você tem ${idade} anos");
