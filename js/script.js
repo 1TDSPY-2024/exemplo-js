@@ -1,8 +1,10 @@
-"use strict";
+//  "use strict";
 // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
 //Por exemplo:
-//a = "Joaquim";
-// var eval = nome;
+// a = "Joaquim";
+// console.log(a);
+// var eval = "strict";
+// console.log(eval);
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
 //Capturar o botão testar através do id com o objeto document do DOM.
@@ -12,9 +14,9 @@
 //     console.log("Testando o botão...");
 // });
 
-
+//Diferença entre var e let:
 // Hoisting
-var nome = "Joaquim";
+let nome = "Joaquim";
 
 if(true)
 {
@@ -22,8 +24,6 @@ if(true)
 }
 
 console.log(nome);
-//Uso estrito, orbigatótio inicialilizar.
-let estrito;
 
 // Declaração de variáveis (var, let, const):
 // Usando var
@@ -33,7 +33,8 @@ console.log(x);
 // Usando let
 let y = 20;
 console.log(y);
-
+y = "teste";
+console.log(y);
 // Usando const (constante, valor não pode ser alterado)
 const z = 30;
 console.log(z);
@@ -47,13 +48,14 @@ console.log(num);
 // String
 let str = "Olá, mundo!";
 console.log(str.charAt(0));
-console.log(str.indexOf("Olá"));
-
+console.log(str.indexOf("mundo"));
+str = str.replace("mundo", "pessoas");
+console.log(str);
 // Boolean
 let bool = true;
 console.log(bool);
 
-// Array
+// Array numérico
 let arr1 = [1, 2, 3, 4, 5];
 let arr2 = [6,7,8,9,10];
 console.log(arr1);
@@ -64,6 +66,11 @@ console.log(arr3);
 // Mesclar Arrays com SPREAD
 let arr4 = [...arr1, ...arr2];
 console.log(arr4);
+
+// Array de strings
+let arr5 = ["João", "Maria", "José"];
+console.log(arr5);
+console.table(arr5);
 
 // Object
 let obj = { nome: "João", idade: 25, devedor: true};
@@ -81,12 +88,12 @@ obj = {...obj, cidade: "São Paulo", estado: "SP"};
 console.log(obj);
 
 //DESTRUCTURING
-// const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
+const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
 
-// const {nome, idade, cidade} = pessoa;
-// console.log(nome);
-// console.log(idade);
-// console.log(cidade);
+const {nome2, idade2, cidade} = pessoa;
+console.log(nome2);
+console.log(idade2);
+console.log(cidade);
 
 // Conversão entre tipos de dados:
 // Converter string para número
@@ -100,7 +107,7 @@ let strNumero2 = numeroStr.toString();
 console.log(strNumero2); // Saída: "20" (string)
 
 // Converter para booleano
-let valor = 0;
+let valor = 1;
 let booleano = Boolean(valor);
 console.log(booleano); // Saída: false (0 é considerado false)
 
@@ -228,30 +235,54 @@ if (nota >= 90) {
 
 // Exercício 1 - Variáveis e Hoisting:
 // Qual será o valor de nome após a execução do código abaixo?
+// "use strict";
+// var nome = "Joaquim";
+// if (true) {
+//     let nome = "João";
+// }
+// console.log(nome);
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+// let estrito;
+// console.log(estrito); // Saída: undefined
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
+// let str = "Olá, mundo!";
+
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
 
+
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+// let obj = { nome: "João", idade: 25, devedor: true };
+// console.log(obj.idade); // Saída: 25
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
+
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
+// let idade = 20;
+// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// console.log(result);
 
 // Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
+// let age = 20;
+
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
+// }
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
