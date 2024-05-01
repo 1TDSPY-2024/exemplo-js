@@ -1,15 +1,22 @@
-"use strict";
+//"use strict";
 // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
 //Por exemplo:
 //a = "Joaquim";
 // var eval = nome;
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
+
+const btnElemento = document.getElementById('botao')
+btnElemento.addEventListener("click", () => {
+    console.log("testando o botao...")
+}
+)
+
+
 // Hoisting
 var nome = "Joaquim";
 
-if(true)
-{
+if (true) {
     let nome = "João";
 }
 
@@ -47,7 +54,7 @@ console.log(bool);
 
 // Array
 let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6,7,8,9,10];
+let arr2 = [6, 7, 8, 9, 10];
 console.log(arr1);
 console.table(arr1);
 // Mesclar Arrays com concat()
@@ -58,7 +65,11 @@ let arr4 = [...arr1, ...arr2];
 console.log(arr4);
 
 // Object
-let obj = { nome: "João", idade: 25, devedor: true};
+let obj = {
+    nome: "João",
+    idade: 25,
+    devedor: true
+};
 console.log(obj);
 console.table(obj);
 console.log(obj.nome);
@@ -69,7 +80,11 @@ console.log(obj["nome"]);
 let atributo = "idade";
 console.log("ATRIBUTO VARIADO : " + obj[atributo]);
 //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
-obj = {...obj, cidade: "São Paulo", estado: "SP"};
+obj = {
+    ...obj,
+    cidade: "São Paulo",
+    estado: "SP"
+};
 console.log(obj);
 
 //DESTRUCTURING
@@ -223,18 +238,24 @@ if (nota >= 90) {
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+let nomeDoIndividuo;
+console.log(nomeDoIndividuo)
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
+// Resposta: texto
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
+let arrConcatenado = [...arr1, ...arr2]
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+console.log(obj.idade)
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
+console.log(obj.cidade)
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
