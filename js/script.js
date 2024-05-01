@@ -1,10 +1,20 @@
 "use strict";
 // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
 //Por exemplo:
-//a = "Joaquim";
-// var eval = nome;
+a = "Joaquim";
+console.log(a);
+// var eval = "strict";
+// console.log(eval);
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
+//Capturar o botão testar através do id com o objeto document do DOM.
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click
+// btnElemento.addEventListener("click", function(){
+//     console.log("Testando o botão...");
+// });
+
+//Diferença entre var e let:
 // Hoisting
 var nome = "Joaquim";
 
@@ -12,6 +22,21 @@ if(true)
 {
     let nome = "João";
 }
+
+// console.log(nome);
+
+// var x = 10;
+// console.log(x)
+
+
+// let y = 20;
+// console.log(y);
+// y = "teste";
+// console.log(y);
+
+// const z = 30;
+// console.log(z);
+
 
 console.log(nome);
 //Uso estrito, orbigatótio inicialilizar.
@@ -41,6 +66,8 @@ let str = "Olá, mundo!";
 console.log(str.charAt(0));
 console.log(str.indexOf("Olá"));
 
+console.log(str.replace("mundo", "pessoas"));
+
 // Boolean
 let bool = true;
 console.log(bool);
@@ -56,6 +83,8 @@ console.log(arr3);
 // Mesclar Arrays com SPREAD
 let arr4 = [...arr1, ...arr2];
 console.log(arr4);
+
+
 
 // Object
 let obj = { nome: "João", idade: 25, devedor: true};
