@@ -62,8 +62,8 @@ console.table(arr1);
 let arr3 = arr1.concat(arr2);
 console.log(arr3);
 // Mesclar Arrays com SPREAD
-let arr4 = [...arr1, ...arr2];
-console.log(arr4);
+// let arr4 = [...arr1, ...arr2];
+
 
 // Object
 let obj = { nome: "João", idade: 25, devedor: true};
@@ -231,21 +231,37 @@ if (nota >= 90) {
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+let semValor ;
+console.log(semValor);
+//resultado: undefined
+
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
 
+ str = "string";
+
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
+let arrConcatenado = [arr1 + arr2];
+console.log(arrConcatenado);
+//[1,2,3,4,56,7,8,9,10]
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+console.log(obj.idade);
+
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
+obj = {...obj, cidade: "São Paulo"};
+console.log(obj)
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
+str = "10";
+
+console.log(parseInt(str));
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
@@ -255,3 +271,5 @@ if (nota >= 90) {
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+let arr4 = {...arr1, ...arr2};
+console.log(arr4);
