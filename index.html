@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/estilo.css" />
+
+    <script src="./js/exercicio.js" defer></script>
     <title>JavaScript</title>
   </head>
   <body>
@@ -16,18 +18,29 @@
           <li class="link"><a href="#">C#</a></li>
         </ul>
       </nav>
-      <button onclick="teste()">Botão</button>
+      <section>
+        <form action="#" method="post" onsubmit="return false">
+          <fieldset>
+              <legend>LOGIN</legend>
+              <div>
+                  <label for="idEmail">Email</label>
+                  <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+              </div>
+              <div>
+                  <label for="idSenha">Senha</label>
+                  <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+              </div>
+              <div>
+                  <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                  <label for="idLembrar">Lembrar-me</label>
+              </div>
+              <div>
+                  <button type="submit">Enviar</button>
+              </div>
+          </fieldset>
+      </form>
+      </section>
+      <button>Botão</button>
     </header>
-
-    <script>
-      //Exemplo de covstrnsção
-      let nome = "Lucas";
-      let idade = 20;
-      function teste() {
-        console.log(nome + idade);
-      }
-
-      //console.log(`Seu nome é ${nome} e sua idade ${idade}`);
-    </script>
   </body>
 </html>
