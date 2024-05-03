@@ -229,29 +229,52 @@ if (nota >= 90) {
 // Exercício 1 - Variáveis e Hoisting:
 // Qual será o valor de nome após a execução do código abaixo?
 
+// Resposta: O valor da variável nome será "Joaquim" após a execução do código.
+
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+
+console.log(estrito); // Saída: undefined
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
 
+// Resposta: String
+
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
+
+console.log(arr4);
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
 
+console.log(obj.idade); // ou console.log(obj['idade']);
+
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
+
+obj.cidade = "São Paulo";
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
 
+let strNumero = "10";
+let numero = parseInt(strNumero);
+console.log(numero);
+ // Saída: 10
+
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
+
+// Resposta: Maior de idade
 
 // Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
 
+// Resposta: Maior de idade 
+
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+
+console.log(arr4);
