@@ -5,144 +5,153 @@
 // var eval = nome;
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
-// Hoisting
-var nome = "Joaquim";
+//Capturar o botão testar através do id com o objeto document do DOM.
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click.
+// btnElemento.addEventListener("click",function(){
+//     console.log("Testando o botão...");
+// });
 
-if(true)
-{
-    let nome = "João";
-}
 
-console.log(nome);
-//Uso estrito, orbigatótio inicialilizar.
-let estrito;
+// // Hoisting
+// var nome = "Joaquim";
 
-// Declaração de variáveis (var, let, const):
-// Usando var
-var x = 10;
-console.log(x);
+// if(true)
+// {
+//     let nome = "João";
+// }
 
-// Usando let
-let y = 20;
-console.log(y);
+// console.log(nome);
+// //Uso estrito, orbigatótio inicialilizar.
+// let estrito;
 
-// Usando const (constante, valor não pode ser alterado)
-const z = 30;
-console.log(z);
-// z = 20;
+// // Declaração de variáveis (var, let, const):
+// // Usando var
+// var x = 10;
+// console.log(x);
 
-// Tipos de dados em JavaScript:
-// Number
-let num = 10;
-console.log(num);
+// // Usando let
+// let y = 20;
+// console.log(y);
 
-// String
-let str = "Olá, mundo!";
-console.log(str.charAt(0));
-console.log(str.indexOf("Olá"));
+// // Usando const (constante, valor não pode ser alterado)
+// const z = 30;
+// console.log(z);
+// // z = 20;
 
-// Boolean
-let bool = true;
-console.log(bool);
+// // Tipos de dados em JavaScript:
+// // Number
+// let num = 10;
+// console.log(num);
 
-// Array
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6,7,8,9,10];
-console.log(arr1);
-console.table(arr1);
-// Mesclar Arrays com concat()
-let arr3 = arr1.concat(arr2);
-console.log(arr3);
-// Mesclar Arrays com SPREAD
-let arr4 = [...arr1, ...arr2];
-console.log(arr4);
+// // String
+// let str = "Olá, mundo!";
+// console.log(str.charAt(0));
+// console.log(str.indexOf("Olá"));
 
-// Object
-let obj = { nome: "João", idade: 25, devedor: true};
-console.log(obj);
-console.table(obj);
-console.log(obj.nome);
-console.log(obj.idade);
-console.log(obj.devedor);
-console.log(obj["nome"]);
-//Quero carregar um atributo do objeto utilizando uma variável
-let atributo = "idade";
-console.log("ATRIBUTO VARIADO : " + obj[atributo]);
-//Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
-obj = {...obj, cidade: "São Paulo", estado: "SP"};
-console.log(obj);
+// // Boolean
+// let bool = true;
+// console.log(bool);
+
+// // Array
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [6,7,8,9,10];
+// console.log(arr1);
+// console.table(arr1);
+// // Mesclar Arrays com concat()
+// let arr3 = arr1.concat(arr2);
+// console.log(arr3);
+// // Mesclar Arrays com SPREAD
+// let arr4 = [...arr1, ...arr2];
+// console.log(arr4);
+
+// // Object
+// let obj = { nome: "João", idade: 25, devedor: true};
+// console.log(obj);
+// console.table(obj);
+// console.log(obj.nome);
+// console.log(obj.idade);
+// console.log(obj.devedor);
+// console.log(obj["nome"]);
+// //Quero carregar um atributo do objeto utilizando uma variável
+// let atributo = "idade";
+// console.log("ATRIBUTO VARIADO : " + obj[atributo]);
+// //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
+// obj = {...obj, cidade: "São Paulo", estado: "SP"};
+// console.log(obj);
 
 //DESTRUCTURING
 // const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
 
 // const {nome, idade, cidade} = pessoa;
+
 // console.log(nome);
 // console.log(idade);
 // console.log(cidade);
 
-// Conversão entre tipos de dados:
-// Converter string para número
-let strNumero = "10";
-let numero = parseInt(strNumero);
-console.log(numero); // Saída: 10 (número)
+// // Conversão entre tipos de dados:
+// // Converter string para número
+// let strNumero = "10";
+// let numero = parseInt(strNumero);
+// console.log(numero); // Saída: 10 (número)
 
-// Converter número para string
-let numeroStr = 20;
-let strNumero2 = numeroStr.toString();
-console.log(strNumero2); // Saída: "20" (string)
+// // Converter número para string
+// let numeroStr = 20;
+// let strNumero2 = numeroStr.toString();
+// console.log(strNumero2); // Saída: "20" (string)
 
-// Converter para booleano
-let valor = 0;
-let booleano = Boolean(valor);
-console.log(booleano); // Saída: false (0 é considerado false)
+// // Converter para booleano
+// let valor = 0;
+// let booleano = Boolean(valor);
+// console.log(booleano); // Saída: false (0 é considerado false)
 
-//Estruturas condicionais
+// //Estruturas condicionais
 
-// O operador ternário, é uma expressão condicional que permite fazer uma atribuição com base em uma condição. Ele é uma forma compacta de escrever uma instrução if-else em uma única linha.
-// A sintaxe básica do if ternário é a seguinte:
+// // O operador ternário, é uma expressão condicional que permite fazer uma atribuição com base em uma condição. Ele é uma forma compacta de escrever uma instrução if-else em uma única linha.
+// // A sintaxe básica do if ternário é a seguinte:
 
-// condição ? expressão_se_verdadeira : expressão_se_falsa
+// // condição ? expressão_se_verdadeira : expressão_se_falsa
 
-//     Se a condição for avaliada como verdadeira, a expressão_se_verdadeira será executada.
-//     Se a condição for avaliada como falsa, a expressão_se_falsa será executada.
-// Por exemplo:
+// //     Se a condição for avaliada como verdadeira, a expressão_se_verdadeira será executada.
+// //     Se a condição for avaliada como falsa, a expressão_se_falsa será executada.
+// // Por exemplo:
 
-let idade = 20;
-let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
-console.log(result);
+// // let idade = 20;
+// // let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// // console.log(result);
 
-// Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
+// // Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
 
-// O if tradicional em JavaScript é uma estrutura de controle de fluxo que permite executar um bloco de código se uma condição for verdadeira. Aqui está a sintaxe básica do if tradicional:
-// if (condição) {
-//   Bloco de código a ser executado se a condição for verdadeira
+// // O if tradicional em JavaScript é uma estrutura de controle de fluxo que permite executar um bloco de código se uma condição for verdadeira. Aqui está a sintaxe básica do if tradicional:
+// // if (condição) {
+// //   Bloco de código a ser executado se a condição for verdadeira
+// // }
+
+// let age = 20;
+
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
 // }
 
-let age = 20;
+// // Neste exemplo, se a idade for maior ou igual a 18, o programa imprimirá "Maior de idade"; caso contrário, imprimirá "Menor de idade".
 
-if (age >= 18) {
-    console.log("Maior de idade");
-} else {
-    console.log("Menor de idade");
-}
+// //Estruturas condicionais com operadores
+// // Você pode usar operadores de comparação e operadores lógicos em instruções if/else-if/else para criar condições mais complexas. Aqui está um exemplo de como isso pode ser feito:
+// let nota = 75;
 
-// Neste exemplo, se a idade for maior ou igual a 18, o programa imprimirá "Maior de idade"; caso contrário, imprimirá "Menor de idade".
-
-//Estruturas condicionais com operadores
-// Você pode usar operadores de comparação e operadores lógicos em instruções if/else-if/else para criar condições mais complexas. Aqui está um exemplo de como isso pode ser feito:
-let nota = 75;
-
-if (nota >= 90) {
-    console.log("Nota A");
-} else if (nota >= 80 && nota < 90) {
-    console.log("Nota B");
-} else if (nota >= 70 && nota < 80) {
-    console.log("Nota C");
-} else if (nota >= 60 && nota < 70) {
-    console.log("Nota D");
-} else {
-    console.log("Nota F");
-}
+// if (nota >= 90) {
+//     console.log("Nota A");
+// } else if (nota >= 80 && nota < 90) {
+//     console.log("Nota B");
+// } else if (nota >= 70 && nota < 80) {
+//     console.log("Nota C");
+// } else if (nota >= 60 && nota < 70) {
+//     console.log("Nota D");
+// } else {
+//     console.log("Nota F");
+// }
 
 // Operadores de Comparação:
 // Igualdade (==):
@@ -247,3 +256,27 @@ if (nota >= 90) {
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+
+//Criando uma lista de usuários:
+
+let listaUsuarios = [
+    {emailUsuario:"joao@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
+];
+
+// listaUsuarios.forEach(function(usuario){
+//     if(usuario.emailUsuario == "joaquim@email.com"){
+//         console.log(usuario.emailUsuario);
+//     }
+// });
+
+for (let x = 0; x < listaUsuarios.length; x++) {
+    if(listaUsuarios[x].emailUsuario == "joaquim@email.com"){
+        console.log("Usuário Validado.");
+        break;  
+    }
+    
+}
