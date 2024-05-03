@@ -273,3 +273,27 @@ console.log(parseInt(str));
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 let arr4 = {...arr1, ...arr2};
 console.log(arr4);
+
+let listaUsuarios = [
+    {emailUsuario:"joao@email.com",senhaUsuario : "1234"},
+    {emailUsuario:"jose@email.com",senhaUsuario : "4312"},
+    {emailUsuario:"maria@email.com",senhaUsuario : "5312"},
+    {emailUsuario:"marta@email.com",senhaUsuario : "5212"},
+    {emailUsuario:"manoel@email.com",senhaUsuario : "5252"}
+];
+listaUsuarios.forEach(function(usuario){   //aqui ele roda todos os itens independente de ter achado o item
+    if(usuario.emailUsuario == "maria@email.com"){
+        console.log(usuario.emailUsuario);   
+    }
+    
+});
+
+for (let x = 0; x < listaUsuarios.length; x++){ //aqui ele para de executar quando encontra o item
+    
+    if(listaUsuarios[x].emailUsuario == "maria@email.com"){
+        console.log("usuario validado");
+        break;
+    }
+    
+}
+
