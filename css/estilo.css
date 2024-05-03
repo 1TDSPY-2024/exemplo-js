@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
     
 }
 
@@ -16,11 +15,10 @@
     flex-basis: 200px;
   }
 
-=======
 }
 
 #cabecalho{
     background-color: aquamarine;
     height: 190px;
->>>>>>> 7b437d9ba520a2ab22f1417b03e772dd0841151a
+
 }
