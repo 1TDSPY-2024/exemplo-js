@@ -255,4 +255,27 @@ if (nota >= 90) {
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
+let listaUsuarios = [
+    {emailUsuario :"joao@email.com", senhaUsuario : "12345"},
+    {emailUsuario : "diego@email.com", senhaUsuario : "12345"},
+    {emailUsuario : "augusto@email.com", senhaUsuario : "12345"},
+    {emailUsuario : "vanessa@email.com", senhaUsuario : "12345"},
+    {emailUsuario : "nicolle@email.com", senhaUsuario : "12345"}
+];
 
+// listaUsuarios.forEach(function(usuario){
+//     if (usuario.emailUsuario == "diego@email.com") {
+//         console.log(usuario.emailUsuario);
+//     }
+// });
+
+for (let x = 0; x < listaUsuarios.length; x++) {
+    let achou = false;
+    if(listaUsuarios[x].emailUsuario == "diego@email.com") {
+        console.log("Usuário " + x + " Validado.");
+        achou = true;
+    }
+}
+
+// console.log(listaUsuarios);
+// console.log(listaUsuarios[2].emailUsuario);
