@@ -14,71 +14,71 @@
 
 
 // Hoisting
-var nome = "Joaquim";
+// var nome = "Joaquim";
 
-if(true)
-{
-    let nome = "João";
-}
+// if(true)
+// {
+//     let nome = "João";
+// }
 
-console.log(nome);
-//Uso estrito, orbigatótio inicialilizar.
-let estrito;
+// console.log(nome);
+// //Uso estrito, orbigatótio inicialilizar.
+// let estrito;
 
-// Declaração de variáveis (var, let, const):
-// Usando var
-var x = 10;
-console.log(x);
+// // Declaração de variáveis (var, let, const):
+// // Usando var
+// var x = 10;
+// console.log(x);
 
-// Usando let
-let y = 20;
-console.log(y);
+// // Usando let
+// let y = 20;
+// console.log(y);
 
-// Usando const (constante, valor não pode ser alterado)
-const z = 30;
-console.log(z);
-// z = 20;
+// // Usando const (constante, valor não pode ser alterado)
+// const z = 30;
+// console.log(z);
+// // z = 20;
 
-// Tipos de dados em JavaScript:
-// Number
-let num = 10;
-console.log(num);
+// // Tipos de dados em JavaScript:
+// // Number
+// let num = 10;
+// console.log(num);
 
-// String
-let str = "Olá, mundo!";
-console.log(str.charAt(0));
-console.log(str.indexOf("Olá"));
+// // String
+// let str = "Olá, mundo!";
+// console.log(str.charAt(0));
+// console.log(str.indexOf("Olá"));
 
-// Boolean
-let bool = true;
-console.log(bool);
+// // Boolean
+// let bool = true;
+// console.log(bool);
 
-// Array
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6,7,8,9,10];
-console.log(arr1);
-console.table(arr1);
-// Mesclar Arrays com concat()
-let arr3 = arr1.concat(arr2);
-console.log(arr3);
-// Mesclar Arrays com SPREAD
-let arr4 = [...arr1, ...arr2];
-console.log(arr4);
+// // Array
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [6,7,8,9,10];
+// console.log(arr1);
+// console.table(arr1);
+// // Mesclar Arrays com concat()
+// let arr3 = arr1.concat(arr2);
+// console.log(arr3);
+// // Mesclar Arrays com SPREAD
+// let arr4 = [...arr1, ...arr2];
+// console.log(arr4);
 
-// Object
-let obj = { nome: "João", idade: 25, devedor: true};
-console.log(obj);
-console.table(obj);
-console.log(obj.nome);
-console.log(obj.idade);
-console.log(obj.devedor);
-console.log(obj["nome"]);
-//Quero carregar um atributo do objeto utilizando uma variável
-let atributo = "idade";
-console.log("ATRIBUTO VARIADO : " + obj[atributo]);
-//Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
-obj = {...obj, cidade: "São Paulo", estado: "SP"};
-console.log(obj);
+// // Object
+// let obj = { nome: "João", idade: 25, devedor: true};
+// console.log(obj);
+// console.table(obj);
+// console.log(obj.nome);
+// console.log(obj.idade);
+// console.log(obj.devedor);
+// console.log(obj["nome"]);
+// //Quero carregar um atributo do objeto utilizando uma variável
+// let atributo = "idade";
+// console.log("ATRIBUTO VARIADO : " + obj[atributo]);
+// //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
+// obj = {...obj, cidade: "São Paulo", estado: "SP"};
+// console.log(obj);
 
 //DESTRUCTURING
 // const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
@@ -127,7 +127,6 @@ console.log(result);
 // }
 
 let age = 20;
-
 if (age >= 18) {
     console.log("Maior de idade");
 } else {
@@ -255,3 +254,5 @@ if (nota >= 90) {
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+
+
