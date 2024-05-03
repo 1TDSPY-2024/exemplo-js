@@ -5,6 +5,7 @@
 // var eval = nome;
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
+<<<<<<< Updated upstream
 //capturar o botão testar através do id com o obj doc do DOM.
 const btnElemento =  document.getElementById("botao");
 btnElemento.addEventListener("click",function(){
@@ -14,23 +15,42 @@ btnElemento.addEventListener("click",function(){
 // o let respeita 
 // Hoisting
 let nome = "Joaquim";
+=======
+//Capturar o botão testar através do id com o objeto document do DOM.
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click.
+// btnElemento.addEventListener("click",function(){
+//     console.log("Testando o botão...");
+// });
 
-if(true)
-{
-    let nome = "João";
-}
+//<<<<<<< HEAD
+// Hoisting
+var nome = "Joaquim";
+//=======
+>>>>>>> Stashed changes
 
+// // Hoisting
+// var nome = "Joaquim";
+//>>>>>>> f7dd09e7c5b7416446ec04c23383538f6b6e21c0
+
+<<<<<<< Updated upstream
 console.log(nome);
 //console.log= print
 // se var tem q colocar nome2
 //Uso estrito, orbigatótio inicialilizar.
 let estrito;
+=======
+// if(true)
+// {
+//     let nome = "João";
+// }
+>>>>>>> Stashed changes
 
-// Declaração de variáveis (var, let, const):
-// Usando var
-var x = 10;
-console.log(x);
+// console.log(nome);
+// //Uso estrito, orbigatótio inicialilizar.
+// let estrito;
 
+<<<<<<< Updated upstream
 // Usando let
 let y = 20;
 y = "teste"
@@ -40,12 +60,23 @@ console.log(y);
 const z = 30;
 console.log(z);
 // z = 20; // nao pode 
+=======
+// // Declaração de variáveis (var, let, const):
+// // Usando var
+// var x = 10;
+// console.log(x);
 
-// Tipos de dados em JavaScript:
-// Number
-let num = 10;
-console.log(num);
+// // Usando let
+// let y = 20;
+// console.log(y);
+>>>>>>> Stashed changes
 
+// // Usando const (constante, valor não pode ser alterado)
+// const z = 30;
+// console.log(z);
+// // z = 20;
+
+<<<<<<< Updated upstream
 // String
 let str = "Olá, mundo!";
 console.log(str.charAt(0)); //olá mundo começa pelo 0
@@ -84,30 +115,73 @@ console.log("ATRIBUTO VARIADO : " + obj[atributo]);
 //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
 obj = {...obj, cidade: "São Paulo", estado: "SP"};
 console.log(obj);
+=======
+// // Tipos de dados em JavaScript:
+// // Number
+// let num = 10;
+// console.log(num);
+
+// // String
+// let str = "Olá, mundo!";
+// console.log(str.charAt(0));
+// console.log(str.indexOf("Olá"));
+
+// // Boolean
+// let bool = true;
+// console.log(bool);
+
+// // Array
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [6,7,8,9,10];
+// console.log(arr1);
+// console.table(arr1);
+// // Mesclar Arrays com concat()
+// let arr3 = arr1.concat(arr2);
+// console.log(arr3);
+// // Mesclar Arrays com SPREAD
+// let arr4 = [...arr1, ...arr2];
+// console.log(arr4);
+
+// // Object
+// let obj = { nome: "João", idade: 25, devedor: true};
+// console.log(obj);
+// console.table(obj);
+// console.log(obj.nome);
+// console.log(obj.idade);
+// console.log(obj.devedor);
+// console.log(obj["nome"]);
+// //Quero carregar um atributo do objeto utilizando uma variável
+// let atributo = "idade";
+// console.log("ATRIBUTO VARIADO : " + obj[atributo]);
+// //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
+// obj = {...obj, cidade: "São Paulo", estado: "SP"};
+// console.log(obj);
+>>>>>>> Stashed changes
 
 //DESTRUCTURING  //quebrar as propriedades do obj em propriedades para chamar sem a necessidade de chamar o obj.
 // const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
 
 // const {nome, idade, cidade} = pessoa;
+
 // console.log(nome);
 // console.log(idade);
 // console.log(cidade);
 
-// Conversão entre tipos de dados:
-// Converter string para número
-let strNumero = "10";
-let numero = parseInt(strNumero);
-console.log(numero); // Saída: 10 (número)
+// // Conversão entre tipos de dados:
+// // Converter string para número
+// let strNumero = "10";
+// let numero = parseInt(strNumero);
+// console.log(numero); // Saída: 10 (número)
 
-// Converter número para string
-let numeroStr = 20;
-let strNumero2 = numeroStr.toString();
-console.log(strNumero2); // Saída: "20" (string)
+// // Converter número para string
+// let numeroStr = 20;
+// let strNumero2 = numeroStr.toString();
+// console.log(strNumero2); // Saída: "20" (string)
 
-// Converter para booleano
-let valor = 0;
-let booleano = Boolean(valor);
-console.log(booleano); // Saída: false (0 é considerado false)
+// // Converter para booleano
+// let valor = 0;
+// let booleano = Boolean(valor);
+// console.log(booleano); // Saída: false (0 é considerado false)
 
 //Estruturas condicionais
 
@@ -120,9 +194,9 @@ console.log(booleano); // Saída: false (0 é considerado false)
 //     Se a condição for avaliada como falsa, a expressão_se_falsa será executada.
 // Por exemplo:
 
-let idade = 20;
-let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
-console.log(result);
+// let idade = 20;
+// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// console.log(result);
 
 // Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
 
@@ -166,9 +240,9 @@ if (nota >= 90) {
 
 // Igualdade Estrita (===):
 // Verifica se dois valores são iguais e do mesmo tipo.
-// let x = 5;
-// let y = "5";
-// console.log(x === y); // Saída: false
+let x = 5;
+let y = "5";
+console.log(x === y); // Saída: false
 
 
 // Diferente (!=):
@@ -261,6 +335,7 @@ if (nota >= 90) {
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
+
 //<script>..</script>
 
 <script>
@@ -272,3 +347,25 @@ if (nota >= 90) {
 //var idade = 20;
 
 console.log("Olá ${nome}, você tem ${idade} anos");
+//<<<<<<< HEAD
+//criando uma lista de usuarios
+let listaUsuarios = [
+    {emailUsuario:"joao@gmail.com", senhaUsuario:"123456"},
+    {emailUsuario:"jose@gmail.com", senhaUsuario:"123456"},
+    {emailUsuario:"joaquim@gmail.com", senhaUsuario:"123456"},
+    {emailUsuario:"maria@gmail.com", senhaUsuario:"123456"},
+    {emailUsuario:"manoel@gmail.com", senhaUsuario:"123456"}
+];
+
+listaUsuarios.forEach(function(usuario){
+    if(usuario.emailUsuario == "joaquim@gmail.com"){
+    console.log(usuario.emailUsuario);
+    }
+});
+
+for (let x = 0; x < listaUsuarios.length; x++){
+    if(listaUsuarios[x].emailUsuario == "joaquim@gmail.com"){
+        console.log("Usuário Velidado.");
+        return true;
+    }
+}
