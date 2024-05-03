@@ -12,7 +12,6 @@
 //     console.log("Testando o botão...");
 // });
 
-
 // Hoisting
 var nome = "Joaquim";
 
@@ -255,3 +254,29 @@ if (nota >= 90) {
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+
+
+let listaUsuarios = [
+    {emailUsuario:"joao@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
+];
+
+// listaUsuarios.forEach(function(usuario){
+//    if(usuario.emailUsuario == "joaquim@email.com"){
+//    console.log(usuario.emailUsuario);
+//    }
+//});
+
+//console.log(listaUsuarios)
+
+for (let x = 0; x < listaUsuarios.length; x++){
+    if (listaUsuarios[x].emailUsuario == "joaquim@email.com"){
+        console.log("Usuario Validado.");
+        return true;
+    }
+}
+
+
