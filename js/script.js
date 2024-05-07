@@ -306,8 +306,9 @@ let listaUsuarios = [
 //     }
     
 // });
-function validaCampos(input1, input2){
 
+function validaCampos(input1, input2){
+    
     const elMsg = document.querySelector(".valida");
 
     for (let x = 0; x < listaUsuarios.length; x++){ //aqui ele para de executar quando encontra o item
@@ -325,9 +326,10 @@ function validaCampos(input1, input2){
             setTimeout(()=>{
                 elMsg.setAttribute("class","valida");
                 elMsg.innerText = "";
+                window.location.href = "../status/sucesso.html"
             },3000);
             
-            return true;
+            return false;
         }
     }
 
@@ -337,6 +339,7 @@ function validaCampos(input1, input2){
     setTimeout(()=>{
         elMsg.setAttribute("class","valida");
         elMsg.innerText = "";
+        window.location.href = "../status/erro.html"
     },3000);
 
     return false;
