@@ -27,8 +27,8 @@ let y = "5"
 // }
 
 let listaUsuarios = [
-    {emailUsuario: "lucas@gmail.com", sennhaUsuario: "1013"},
-    {emailUsuario: "beto@gmail.com", sennhaUsuario: "1013"},
+    {emailUsuario: "lucas@gmail.com", senhaUsuario: "1013"},
+    {emailUsuario: "beto@gmail.com", senhaUsuario: "1013"},
 ];
 
 // console.log(listaUsuarios[1].emailUsuario);
@@ -39,12 +39,24 @@ let listaUsuarios = [
 //     }
 // });
 
-for(let x =0; x < listaUsuarios.length; x++){
-    //const element = listaUsuarios[x]
-    //console.log(element)
 
-    if(listaUsuarios[x].emailUsuario == "lucas@gmail.com"){
-        console.log("valido")
-        return "true";
+function validaCampos(input1, input2){
+    const elMsg = document.querySelector(".valida");
+
+    for(let x = 0; x < listaUsuarios.length; x++){
+        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+
+            elMsg.setAttribute("class","sucesso");
+            elMsg.innerText = "Login Realizado com sucesso";
+
+            console.log("valido");
+            return true;
+        }
+        else{
+            console.log("Alou")
+        }
     }
+    elMsg.setAttribute("class","erro");
+    elMsg.innerText = "Usuario ou senha incorreto";
+    return false;
 }

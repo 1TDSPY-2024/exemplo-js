@@ -21,3 +21,15 @@
     background-color: aquamarine;
     height: 190px;
 }
+
+.sucesso{
+  color: black;
+  font-weight: 500;
+  border: 1px solid red;
+}
+
+.erro{
+  color: red;
+  font-weight: 500;
+  border: 1px solid green;
+}
