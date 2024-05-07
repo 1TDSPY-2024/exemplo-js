@@ -281,19 +281,24 @@ let listaUsuarios = [
     {emailUsuario:"marta@email.com",senhaUsuario : "5212"},
     {emailUsuario:"manoel@email.com",senhaUsuario : "5252"}
 ];
-listaUsuarios.forEach(function(usuario){   //aqui ele roda todos os itens independente de ter achado o item
-    if(usuario.emailUsuario == "maria@email.com"){
-        console.log(usuario.emailUsuario);   
-    }
-    
-});
 
-for (let x = 0; x < listaUsuarios.length; x++){ //aqui ele para de executar quando encontra o item
+
+// listaUsuarios.forEach(function(usuario){   //aqui ele roda todos os itens independente de ter achado o item
+//     if(usuario.emailUsuario == "maria@email.com"){
+//         console.log(usuario.emailUsuario);   
+//     }
     
-    if(listaUsuarios[x].emailUsuario == "maria@email.com"){
-        console.log("usuario validado");
-        break;
+// });
+function validaCampos(input1, input2){
+
+    for (let x = 0; x < listaUsuarios.length; x++){ //aqui ele para de executar quando encontra o item
+    
+        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+            console.log("usuario validado");
+            break;
+        }
     }
+
     
 }
 
