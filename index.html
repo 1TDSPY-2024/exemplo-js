@@ -6,35 +6,12 @@
     <link rel="stylesheet" href="./css/estilo.css" />
     <title>JavaScript</title>
 
-    <!-- <script>
-      // Comentário de linha
-      /*
-        Comentário de bloco
-        */
-      // Variáveis
-      //   console.log("Hello, World!");
-      //   //   alert("Olá mundo!");
-      //   document.write("Olá mundo!");
-      //   // Entrada de dados
-      //   var nome = prompt("Qual o seu nome?");
-      //   alert("Olá " + nome);
-
-      // Janela confirm
-      //   var resposta = confirm("Deseja realmente sair?");
-      //   if (resposta == true) {
-      //     alert("Saindo...");
-      //   } else {
-      //     alert("Você não saiu!");
-      //   }
-    </script> -->
     <script src="./js/script.js" defer></script>
   </head>
 
   <body>
     <header id="topo">
-      <!-- <h1 id="titulo" onmouseover="console.log(this.innerHTML)">JavaScript</h1> -->
       <h1 id="titulo">JavaScript</h1>
-
       <nav>
         <ul>
           <li class="link"><a href="#">JavaScript</a></li>
@@ -44,22 +21,50 @@
       </nav>
     </header>
 
-    <!-- <button onclick="alert('Botão testado!')">Teste de botão</button> -->
-    <button id="botao">Teste de botão</button>
-
-    <!-- <script>
-      //   console.warn("AVISO");
-      //   console.error("ERRO");
-      //   console.info("INFO");
-      //   console.log("LOG");
-
-      //   // Exemplo de concatenação de Strings no console
-      //   var nome = "João";
-      //   var idade = 20;
-      //   console.log("Olá " + nome + ", você tem " + idade + " anos.");
-
-      //   // Exemplo de concatenação com template-string/template-literal ou interpolação
-      //   console.log(`Olá ${nome}, você tem ${idade} anos.`);
-    </script> -->
+    <div>
+      <h2>VALIDAÇÃO</h2>
+      <div>
+        <form
+          action="#"
+          method="get"
+          onsubmit="return validaCampos(this.idEmail, this.idSenha)"
+        >
+          <fieldset>
+            <legend>LOGIN</legend>
+            <div>
+              <label for="idEmail">Email</label>
+              <input
+                type="email"
+                name="txtEmail"
+                id="idEmail"
+                placeholder="Digite seu email"
+              />
+            </div>
+            <div>
+              <label for="idSenha">Senha</label>
+              <input
+                type="password"
+                name="txtSenha"
+                id="idSenha"
+                placeholder="Digite sua senha"
+              />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="txtLembrar"
+                id="idLembrar"
+                value="lembrete"
+                checked
+              />
+              <label for="idLembrar">Lembrar-me</label>
+            </div>
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
