@@ -298,14 +298,38 @@ let listaUsuarios = [
 // });
 
 function validaCampos(input1,input2){
-
+    // Recuperando o elemento da mensagem do usuario.
+    // .valida é a classe do paragrafo no HTML
+    const elMsg = document.querySelector(".valida");
 
     for (let x = 0; x < listaUsuarios.length; x++) {
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
-            console.log("Usuário Validado.");
+
+            //Atribuir uma nova classe ao elemento de msg do usuario.
+            elMsg.setAttribute("class","sucesso");
+            // innerText - usado para capturar o texto entre as tags <p> e </p>
+            elMsg.innerText = "Login realizado com sucesso";
+
+            // Funcao temporizadora interna do JavaScript
+            // Configurada em milissegundos
+            // Ela será executada após 3000 milissegundos
+            setTimeout(() =>{
+                elMsg.setAttribute("class", "valida");
+                elMsg.innerText = ""
+            }, 3000);
+
             return true;
         }
     }
+
+    //Atribuir uma nova classe ao elemento de msg do usuario.
+    elMsg.setAttribute("class","erro");
+    // innerText - usado para capturar o texto entre as tags <p> e </p>
+    elMsg.innerText = "Nome de usuário ou senha incorretos!";
+    setTimeout(() =>{
+        elMsg.setAttribute("class", "valida");
+        elMsg.innerText = ""
+    }, 3000);
 
     return false;
 }
