@@ -105,53 +105,53 @@
 // let booleano = Boolean(valor);
 // console.log(booleano); // Saída: false (0 é considerado false)
 
-//Estruturas condicionais
+// //Estruturas condicionais
 
-// O operador ternário, é uma expressão condicional que permite fazer uma atribuição com base em uma condição. Ele é uma forma compacta de escrever uma instrução if-else em uma única linha.
-// A sintaxe básica do if ternário é a seguinte:
+// // O operador ternário, é uma expressão condicional que permite fazer uma atribuição com base em uma condição. Ele é uma forma compacta de escrever uma instrução if-else em uma única linha.
+// // A sintaxe básica do if ternário é a seguinte:
 
-// condição ? expressão_se_verdadeira : expressão_se_falsa
+// // condição ? expressão_se_verdadeira : expressão_se_falsa
 
-//     Se a condição for avaliada como verdadeira, a expressão_se_verdadeira será executada.
-//     Se a condição for avaliada como falsa, a expressão_se_falsa será executada.
-// Por exemplo:
+// //     Se a condição for avaliada como verdadeira, a expressão_se_verdadeira será executada.
+// //     Se a condição for avaliada como falsa, a expressão_se_falsa será executada.
+// // Por exemplo:
 
-// let idade = 20;
-// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
-// console.log(result);
+// // let idade = 20;
+// // let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// // console.log(result);
 
-// Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
+// // Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
 
-// O if tradicional em JavaScript é uma estrutura de controle de fluxo que permite executar um bloco de código se uma condição for verdadeira. Aqui está a sintaxe básica do if tradicional:
-// if (condição) {
-//   Bloco de código a ser executado se a condição for verdadeira
+// // O if tradicional em JavaScript é uma estrutura de controle de fluxo que permite executar um bloco de código se uma condição for verdadeira. Aqui está a sintaxe básica do if tradicional:
+// // if (condição) {
+// //   Bloco de código a ser executado se a condição for verdadeira
+// // }
+
+// let age = 20;
+
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
 // }
 
-let age = 20;
+// // Neste exemplo, se a idade for maior ou igual a 18, o programa imprimirá "Maior de idade"; caso contrário, imprimirá "Menor de idade".
 
-if (age >= 18) {
-    console.log("Maior de idade");
-} else {
-    console.log("Menor de idade");
-}
+// //Estruturas condicionais com operadores
+// // Você pode usar operadores de comparação e operadores lógicos em instruções if/else-if/else para criar condições mais complexas. Aqui está um exemplo de como isso pode ser feito:
+// let nota = 75;
 
-// Neste exemplo, se a idade for maior ou igual a 18, o programa imprimirá "Maior de idade"; caso contrário, imprimirá "Menor de idade".
-
-//Estruturas condicionais com operadores
-// Você pode usar operadores de comparação e operadores lógicos em instruções if/else-if/else para criar condições mais complexas. Aqui está um exemplo de como isso pode ser feito:
-let nota = 75;
-
-if (nota >= 90) {
-    console.log("Nota A");
-} else if (nota >= 80 && nota < 90) {
-    console.log("Nota B");
-} else if (nota >= 70 && nota < 80) {
-    console.log("Nota C");
-} else if (nota >= 60 && nota < 70) {
-    console.log("Nota D");
-} else {
-    console.log("Nota F");
-}
+// if (nota >= 90) {
+//     console.log("Nota A");
+// } else if (nota >= 80 && nota < 90) {
+//     console.log("Nota B");
+// } else if (nota >= 70 && nota < 80) {
+//     console.log("Nota C");
+// } else if (nota >= 60 && nota < 70) {
+//     console.log("Nota D");
+// } else {
+//     console.log("Nota F");
+// }
 
 // Operadores de Comparação:
 // Igualdade (==):
@@ -162,9 +162,9 @@ if (nota >= 90) {
 
 // Igualdade Estrita (===):
 // Verifica se dois valores são iguais e do mesmo tipo.
-let x = 5;
-let y = "5";
-console.log(x === y); // Saída: false
+// let x = 5;
+// let y = "5";
+// console.log(x === y); // Saída: false
 
 
 // Diferente (!=):
@@ -229,30 +229,54 @@ console.log(x === y); // Saída: false
 
 // Exercício 1 - Variáveis e Hoisting:
 // Qual será o valor de nome após a execução do código abaixo?
+// "use strict";
+// var nome = "Joaquim";
+// if (true) {
+//     let nome = "João";
+// }
+// console.log(nome);
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+// let estrito;
+// console.log(estrito);
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
+// let str = "Olá, mundo!";
+
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
 
+
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+// let obj = { nome: "João", idade: 25, devedor: true };
+// console.log(obj.idade); 
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
+
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
+// let idade = 20;
+// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// console.log(result);
 
 // Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
+// let age = 20;
+
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
+// }
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
@@ -260,5 +284,22 @@ console.log(x === y); // Saída: false
 //Criando uma lista de usuários:
 
 let listaUsuarios = [
-    {emailUsuario:"joao@email.com",senhaUsuario}
-]
+    {emailUsuario:"joao@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
+];
+
+// listaUsuarios.forEach(function(usuario){
+//     if(usuario.emailUsuario == "joaquim@email.com"){
+//         console.log(usuario.emailUsuario);
+//     }
+// });
+
+for (let x = 0; x < listaUsuarios.length; x++) {
+    if(listaUsuarios[x].emailUsuario == "joaquim@email.com"){
+        console.log("Usuário Validado.");
+        break; 
+    }
+}
