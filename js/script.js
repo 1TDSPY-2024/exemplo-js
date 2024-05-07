@@ -275,11 +275,34 @@ let listaUsuarios = [
     {emailUsuario:"roberto@email.com", senhaUsuario:"senhaMaria"} 
 ];
 
-for(let x = 0; x < listaUsuarios.length; x++) {
-    if(listaUsuarios[x].emailUsuario == "joaoemail.com") {
-        console.log("Usuário validado");
-    };
+function validaCampos(input1, input2) {
+    
+    const elMsg = document.querySelector(".valida");
+    
+    for(let x = 0; x < listaUsuarios.length; x++) {
+        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)) {
+            
+            elMsg.setAttribute("class", "sucesso");
+            elMsg.innerText = "Login realizado com SUCESSO!";
+
+            setTimeout(() =>{
+                elMsg.setAttribute("class", "valida");
+                elMsg.innerText = "";
+            },3000)
+
+            return true;
+        };
+    }
+    elMsg.setAttribute("class", "erro");
+    elMsg.innerText = "Usuário ou senha incorretos!";
+    
+    setTimeout(() =>{
+        elMsg.setAttribute("class", "valida");
+        elMsg.innerText = "";
+    },3000)
+    return false;
 }; 
+
 
 
 // console.log(listaUsuarios.forEach((usuario) => {
