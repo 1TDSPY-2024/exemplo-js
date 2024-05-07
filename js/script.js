@@ -305,6 +305,11 @@ function validaCampos(input1,input2){
     for (let x = 0; x < listaUsuarios.length; x++) {
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
 
+            //Criando um objeto no localStorag
+            // localStorage.setItem("chave-chave", "valor");
+            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+
+
             //Atribuir uma nova classe ao elemento de msg do usuario.
             elMsg.setAttribute("class","sucesso");
             // innerText - usado para capturar o texto entre as tags <p> e </p>
@@ -315,10 +320,12 @@ function validaCampos(input1,input2){
             // Ela será executada após 3000 milissegundos
             setTimeout(() =>{
                 elMsg.setAttribute("class", "valida");
-                elMsg.innerText = ""
-            }, 3000);
-
-            return true;
+                elMsg.innerText = "";
+                
+                // Redirecionamento do usuário para outra página
+                window.location.href = "../status/sucesso.html";
+            },3000);
+            return false;
         }
     }
 
@@ -328,8 +335,11 @@ function validaCampos(input1,input2){
     elMsg.innerText = "Nome de usuário ou senha incorretos!";
     setTimeout(() =>{
         elMsg.setAttribute("class", "valida");
-        elMsg.innerText = ""
-    }, 3000);
+        elMsg.innerText = "";
+
+        // Redirecionamento do usuário para outra página
+        window.location.href = "../status/erro.html";
+    },3000);
 
     return false;
 }
