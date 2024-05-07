@@ -308,14 +308,38 @@ let listaUsuarios = [
 // });
 function validaCampos(input1, input2){
 
+    const elMsg = document.querySelector(".valida");
+
     for (let x = 0; x < listaUsuarios.length; x++){ //aqui ele para de executar quando encontra o item
     
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
-            console.log("usuario validado");
+            
+            //recuperando o elemento da msg do usuario
+                        //funcao temporizadora, utilizamos funcao anonima e dps colocamos o tempo em milisegundos
+            
+        
+            elMsg.setAttribute("class","sucesso");
+            elMsg.innerText = "Login realizado com sucesso!";
+
+    
+            setTimeout(()=>{
+                elMsg.setAttribute("class","valida");
+                elMsg.innerText = "";
+            },3000);
+            
             return true;
         }
     }
 
+    elMsg.setAttribute("class","fracasso");
+    elMsg.innerText = "Nome de usuario ou senha incorretos!";
+
+    setTimeout(()=>{
+        elMsg.setAttribute("class","valida");
+        elMsg.innerText = "";
+    },3000);
+
+    return false;
     
 }
 
