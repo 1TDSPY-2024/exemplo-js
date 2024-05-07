@@ -229,30 +229,54 @@
 
 // Exercício 1 - Variáveis e Hoisting:
 // Qual será o valor de nome após a execução do código abaixo?
+// "use strict";
+// var nome = "Joaquim";
+// if (true) {
+//     let nome = "João";
+// }
+// console.log(nome);
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+// let estrito;
+// console.log(estrito);
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
+// let str = "Olá, mundo!";
+
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
 
+
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+// let obj = { nome: "João", idade: 25, devedor: true };
+// console.log(obj.idade); 
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
+
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
+// let idade = 20;
+// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// console.log(result);
 
 // Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
+// let age = 20;
+
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
+// }
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
@@ -273,10 +297,35 @@ let listaUsuarios = [
 //     }
 // });
 
-for (let x = 0; x < listaUsuarios.length; x++) {
-    if(listaUsuarios[x].emailUsuario == "joaquim@email.com"){
-        console.log("Usuário Validado.");
-        break;  
-    }
+function validaCampos(input1,input2) {
     
+    //Recuperando o elemento da msg do usuario.
+    const elMsg = document.querySelector(".valida");
+    
+    for (let x = 0; x < listaUsuarios.length; x++) {
+        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+
+            localStorage.setItem('usuario-logado', JSON.stringify(listaUsuarios[x]))
+
+           //Atribuir uma nova classe ao elemento de msg do usuario. 
+           elMsg.setAttribute("class","sucesso");
+           elMsg.innerText = "Login realizado com SUCESSSO!";
+
+           setTimeout(()=>{
+                elMsg.setAttribute("class","valida");
+                elMsg.innerText = "";
+                window.location.href = '../status/sucesso.html'
+            },3000);
+            return false; 
+        }
+    }
+
+    elMsg.setAttribute("class","erro");
+    elMsg.innerText = "Nome de usuário ou senha incorretos!";
+    setTimeout(()=>{
+        elMsg.setAttribute("class","valida");
+        elMsg.innerText = "";
+        window.location.href = '../status/sucesso.html'
+    },3000);
+    return false;
 }
