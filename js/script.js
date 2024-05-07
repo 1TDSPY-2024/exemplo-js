@@ -299,12 +299,31 @@ let listaUsuarios = [
 
 function validaCampos(input1,input2) {
     
+    //Recuperando o elemento da msg do usuario.
+    const elMsg = document.querySelector(".valida");
+    
     for (let x = 0; x < listaUsuarios.length; x++) {
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
-            console.log("Usuário Validado.");
+
+           //Atribuir uma nova classe ao elemento de msg do usuario. 
+           elMsg.setAttribute("class","sucesso");
+           elMsg.innerText = "Login realizado com SUCESSSO!";
+
+           setTimeout(()=>{
+                elMsg.setAttribute("class","valida");
+                elMsg.innerText = "";
+           },3000);
+
+
             return true; 
         }
     }
 
+    elMsg.setAttribute("class","erro");
+    elMsg.innerText = "Nome de usuário ou senha incorretos!";
+    setTimeout(()=>{
+        elMsg.setAttribute("class","valida");
+        elMsg.innerText = "";
+   },3000);
     return false;
 }
