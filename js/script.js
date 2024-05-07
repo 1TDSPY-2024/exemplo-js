@@ -297,9 +297,14 @@ let listaUsuarios = [
 //     }
 // });
 
-for (let x = 0; x < listaUsuarios.length; x++) {
-    if(listaUsuarios[x].emailUsuario == "joaquim@email.com"){
-        console.log("Usuário Validado.");
-        break; 
+function validaCampos(input1,input2) {
+    
+    for (let x = 0; x < listaUsuarios.length; x++) {
+        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+            console.log("Usuário Validado.");
+            return true; 
+        }
     }
+
+    return false;
 }
