@@ -246,7 +246,7 @@ console.log(semValor);
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
 
- str = "string";
+//  str = "string";
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
@@ -256,19 +256,19 @@ console.log(arrConcatenado);
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
-console.log(obj.idade);
+// console.log(obj.idade);
 
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
-obj = {...obj, cidade: "São Paulo"};
-console.log(obj)
+// obj = {...obj, cidade: "São Paulo"};
+// console.log(obj)
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
-str = "10";
+// str = "10";
 
-console.log(parseInt(str));
+// console.log(parseInt(str));
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
@@ -312,7 +312,7 @@ function validaCampos(input1, input2){
     
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
             console.log("usuario validado");
-            break;
+            return true;
         }
     }
 
