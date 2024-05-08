@@ -307,42 +307,36 @@ let listaUsuarios = [
     
 // });
 
-function validaCampos(input1, input2){
-    
+function validaCampos(input1,input2) {
+   
+    //Recuperando o elemento da msg do usuario.
     const elMsg = document.querySelector(".valida");
-
-    for (let x = 0; x < listaUsuarios.length; x++){ //aqui ele para de executar quando encontra o item
     
+    for (let x = 0; x < listaUsuarios.length; x++) {
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
-            
-            //recuperando o elemento da msg do usuario
-                        //funcao temporizadora, utilizamos funcao anonima e dps colocamos o tempo em milisegundos
-            
-        
-            elMsg.setAttribute("class","sucesso");
-            elMsg.innerText = "Login realizado com sucesso!";
 
-    
-            setTimeout(()=>{
+            //Criando um objeto no localStorage
+            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+
+           //Atribuir uma nova classe ao elemento de msg do usuario. 
+           elMsg.setAttribute("class","sucesso");
+           elMsg.innerText = "Login realizado com SUCESSSO!";
+
+           setTimeout(()=>{
                 elMsg.setAttribute("class","valida");
                 elMsg.innerText = "";
-                window.location.href = "../status/sucesso.html"
-            },3000);
-            
-            return false;
+                window.location.href = "../status/sucesso.html";
+           },3000);
+            return false; 
         }
     }
 
-    elMsg.setAttribute("class","fracasso");
-    elMsg.innerText = "Nome de usuario ou senha incorretos!";
-
+    elMsg.setAttribute("class","erro");
+    elMsg.innerText = "Nome de usuário ou senha incorretos!";
     setTimeout(()=>{
         elMsg.setAttribute("class","valida");
         elMsg.innerText = "";
-        window.location.href = "../status/erro.html"
-    },3000);
-
+        window.location.href = "../status/erro.html";
+   },3000);
     return false;
-    
 }
-

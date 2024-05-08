@@ -1,40 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
-}
-.sucesso{
-  color:rgb(255, 255, 255);
-  font-weight: 500;
-  background-color: rgb(0, 128, 6);
-  height: 100px;
-  text-align: center;
-  border: 2px solid green;
-}
-.fracasso{
-  color:rgb(255, 255, 255);
-  font-weight: 500;
-  font-size: 2vh;
-  text-align: center;
-  background-color: rgb(255, 42, 4);
-  height: 100px;
-  border: 2px solid rgb(80, 1, 1);
-}
-#cabecalho{
-  display: flex;
-  justify-content: space-between;
+    box-sizing: border-box;
+    }
 
-  h1{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 200px;
-  }
+    .sucesso{
+      color:#0b700b;
+      font-weight: 500;
+      background-color: #8bea8b;
+      border: 2px solid #0b700b;
+    }
 
-
-}
-
-#cabecalho{
-    background-color: aquamarine;
-    height: 190px;
-
-}
+    .erro{
+      color:#c61523;
+      font-weight: 500;
+      background-color: #f38a8a;
+      border: 2px solid #f3081c;
+    }
