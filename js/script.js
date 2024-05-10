@@ -281,6 +281,33 @@
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
+const alteraVisao = (inputSenha)=>{
+    if(inputSenha.type == "password"){
+        inputSenha.setAttribute("type", "text");
+    } else {
+        inputSenha.setAttribute("type", "password");
+    }
+}
+
+let iconEye = document.querySelector("i");
+ 
+iconEye.addEventListener('click', function(){
+    // Recuperando o elemento inputSenha do HTML
+    let inputSenha = document.querySelector("#idSenha");
+
+    if(this.className == "fa-regular fa-eye-slash"){
+        // setando uma nova classe para o ícone "i" iconEye
+        this.setAttribute("class", "fa-regular fa-eye");
+        alteraVisao(inputSenha);
+    } else {
+        this.setAttribute("class", "fa-regular fa-eye-slash");
+        alteraVisao(inputSenha);
+
+    }
+});
+
+
+
 //Criando uma lista de usuários:
 
 let listaUsuarios = [
