@@ -33,3 +33,8 @@
   font-weight: 500;
   border: 1px solid green;
 }
+
+i{
+  cursor: pointer;
+  user-select: none;
+}

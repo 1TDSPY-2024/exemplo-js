@@ -27,7 +27,7 @@ let y = "5"
 // }
 
 let listaUsuarios = [
-    {emailUsuario: "lucas@gmail.com", senhaUsuario: "1013"},
+    {emailUsuario: "lucas@gmail.com", senhaUsuario: "1013", userName: "luquinhas"},
     {emailUsuario: "beto@gmail.com", senhaUsuario: "1013"},
 ];
 
@@ -39,6 +39,19 @@ let listaUsuarios = [
 //     }
 // });
 
+let iconOlho = document.querySelector("i");
+let senha = document.querySelector("#idSenha");
+iconOlho.addEventListener('click',function(){
+    if(this.className == "fa-regular fa-eye-slash"){
+        this.setAttribute("class", "fa-regular fa-eye");
+        senha.setAttribute("type", "text");
+    }else{
+        this.setAttribute("class", "fa-regular fa-eye-slash");
+        senha.setAttribute("type", "password");
+
+    }
+});
+
 
 function validaCampos(input1, input2){
     const elMsg = document.querySelector(".valida");
@@ -46,17 +59,20 @@ function validaCampos(input1, input2){
     for(let x = 0; x < listaUsuarios.length; x++){
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
 
+            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
             elMsg.setAttribute("class","sucesso");
             elMsg.innerText = "Login Realizado com sucesso";
 
+            setTimeout(()=>{
+                elMsg.setAttribute("class","valida");
+                elMsg.innerText = "";
+                window.location.href = "../serviço/sucesso.html";
+           },3000);
             console.log("valido");
-            return true;
-        }
-        else{
-            console.log("Alou")
+            return false
         }
     }
     elMsg.setAttribute("class","erro");
-    elMsg.innerText = "Usuario ou senha incorreto";
+    elMsg.innerText = "Nome de usuário ou senha incorretos!";
     return false;
 }
