@@ -17,3 +17,12 @@
     background-color: #f38a8a;
     border: 2px solid #f3081c;
   }
+
+  #senha {
+    display: flex;
+  }
+
+  #eye :nth-child(n){
+    cursor: pointer;
+    user-select: none;
+  }

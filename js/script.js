@@ -297,6 +297,19 @@ let listaUsuarios = [
 //     }
 // });
 
+let iconEye = document.querySelector("i")
+let inputSenha = document.querySelector("#idSenha")
+iconEye.addEventListener('click', function(){
+    if (this.className == "fa-solid fa-eye-slash") {
+        this.setAttribute("class", "fa-solid fa-eye")
+        inputSenha.setAttribute("type", "text") 
+        
+    } else {
+        this.setAttribute("class", "fa-solid fa-eye-slash")
+        inputSenha.setAttribute("type", "password") 
+    }
+}) 
+
 function validaCampos(input1,input2) {
    
     //Recuperando o elemento da msg do usuario.
@@ -308,6 +321,13 @@ function validaCampos(input1,input2) {
             //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
 
+            //criando token
+            const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
+
+            //criando o objeto na session storage
+
+            sessionStorage.setItem("token", tokenUser)
+            
            //Atribuir uma nova classe ao elemento de msg do usuario. 
            elMsg.setAttribute("class","sucesso");
            elMsg.innerText = "Login realizado com SUCESSSO!";

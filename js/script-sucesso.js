@@ -1,11 +1,13 @@
 
 
 //Recuperando o objeto do usuario logado.
-const usuario = JSON.parse(localStorage.getItem("usuario-logado"));
+let tokenUser = sessionStorage.getItem("token")
 
-if(usuario){ 
-const elViewUser = document.querySelector("#view-user");
-elViewUser.innerText = usuario.emailUsuario;
+
+if(tokenUser != "" && tokenUser != undefined){ 
+   const elViewUser = document.querySelector("#view-user");
+   const usuario = JSON.parse(localStorage.getItem("usuario-logado"));
+   elViewUser.innerText = usuario.emailUsuario;
 
 const elLogoutUser = document.querySelector("#logout-user");
 elLogoutUser.addEventListener("click",()=>{
