@@ -52,6 +52,7 @@ iconOlho.addEventListener('click',function(){
     }
 });
 
+//console.log(Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2));
 
 function validaCampos(input1, input2){
     const elMsg = document.querySelector(".valida");
@@ -60,6 +61,9 @@ function validaCampos(input1, input2){
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
 
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+            const tokenUser = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);
+            sessionStorage.setItem("token", tokenUser);
+
             elMsg.setAttribute("class","sucesso");
             elMsg.innerText = "Login Realizado com sucesso";
 
