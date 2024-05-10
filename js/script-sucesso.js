@@ -9,10 +9,11 @@
 
  const elLogoutUser = document.querySelector("#logout-user");
  elLogoutUser.addEventListener("click",()=>{
+    sessionStorage.removeItem("token");
     localStorage.removeItem("usuario-logado");
     window.location.href = "../index.html";
  });
 }
 else{
-    window.location.href = "../index.html";
+    window.location.href = "../erro.html";
 }
