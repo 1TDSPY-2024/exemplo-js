@@ -306,6 +306,18 @@ let listaUsuarios = [
 //     }
     
 // });
+let senha = document.getElementById("idSenha");
+let iconEye = document.querySelector("i");
+iconEye.addEventListener('click', function(){
+    if(this.className == "fa-regular fa-eye-slash"){
+        this.setAttribute("class","fa-regular fa-eye");
+        senha.setAttribute("type", "text");
+    }else{
+        this.setAttribute("class","fa-regular fa-eye-slash");
+        senha.setAttribute("type", "password");
+    }
+})
+
 
 function validaCampos(input1,input2) {
    
