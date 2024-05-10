@@ -302,6 +302,11 @@ function validaCampos(input1,input2) {
             //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
 
+            //Criando o toker de autenticação do usuario!
+            const tokenUser = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);
+            //Criando o objeto na sessinStorage e guardando o token;
+            sessionStorage.setItem("token", tokenUser);
+
            //Atribuir uma nova classe ao elemento de msg do usuario. 
            elMsg.setAttribute("class","sucesso");
            elMsg.innerText = "Login realizado com SUCESSSO!";
