@@ -291,6 +291,36 @@ let listaUsuarios = [
     {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
 ];
 
+const alterarVisao = (inputSenha) =>{
+    if(inputSenha.type == "password"){
+        inputSenha.setAttribute("type", "text");
+    }else{
+        inputSenha.setAttribute("type","password");
+    }
+}
+
+let iconEye = document.querySelector("i");
+iconEye.addEventListener('click',function(){
+    let inputSenha = document.querySelector("#idSenha");
+    // this = iconEye
+    // if(this.className == "fa-regular fa-eye-slash"){
+    //     this.setAttribute("class","fa-regular fa-eye");
+    //     idSenha.setAttribute("type","text");
+    // }else{
+    //     this.setAttribute("class","fa-regular fa-eye-slash");
+    //     idSenha.setAttribute("type","password");
+    // }
+    if(this.className == "fa-regular fa-eye-slash"){
+        this.setAttribute("class","fa-regular fa-eye");
+        alterarVisao(inputSenha);
+    }else{
+        this.setAttribute("class","fa-regular fa-eye-slash");
+        alterarVisao(inputSenha);
+    }
+})
+
+
+
 // listaUsuarios.forEach(function(usuario){
 //     if(usuario.emailUsuario == "joaquim@email.com"){
 //         console.log(usuario.emailUsuario);
