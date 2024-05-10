@@ -271,9 +271,24 @@
 
 // // Criando lista de usuarios:
 let listaUsuarios = [ 
-    {emailUsuario:"joao@email.com", senhaUsuario:"senhaJoao"}, 
-    {emailUsuario:"roberto@email.com", senhaUsuario:"senhaMaria"} 
+    {nomeUsuario: "Joao", emailUsuario:"joao@email.com", senhaUsuario:"senhaJoao"}, 
+    {nomeUsuario: "Roberto", emailUsuario:"roberto@email.com", senhaUsuario:"senhaMaria"} 
 ];
+
+let iconEye = document.querySelector("i");
+iconEye.addEventListener('click', function(){
+    let inputSenha = document.querySelector("#idSenha");
+
+    if(this.className == "fa-regular fa-eye-slash") {
+        this.setAttribute("class", "fa-regular fa-eye");
+        inputSenha.type="text";
+    } else {
+        this.setAttribute("class", "fa-regular fa-eye");
+        inputSenha.type="password";
+    }
+
+});
+
 
 function validaCampos(input1, input2) {
     
@@ -290,16 +305,11 @@ function validaCampos(input1, input2) {
                 elMsg.innerText = "";
             },3000)
 
-            return true;
+            return false;
         };
     }
     elMsg.setAttribute("class", "erro");
     elMsg.innerText = "Usuário ou senha incorretos!";
-    
-    setTimeout(() =>{
-        elMsg.setAttribute("class", "valida");
-        elMsg.innerText = "";
-    },3000)
     return false;
 }; 
 
