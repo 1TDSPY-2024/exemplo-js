@@ -303,6 +303,9 @@ let iconEye = document.querySelector("i");
 iconEye.addEventListener('click',function(){
     let inputSenha = document.querySelector("#idSenha");
     // this = iconEye
+
+    // Essa resolução seria sem a arrow function codada acima
+    
     // if(this.className == "fa-regular fa-eye-slash"){
     //     this.setAttribute("class","fa-regular fa-eye");
     //     idSenha.setAttribute("type","text");
@@ -337,6 +340,11 @@ function validaCampos(input1,input2) {
 
             //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+
+            //Criando token
+            const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
+            //Criando o objeto na sessionSorage
+            sessionStorage.setItem("token",tokenUser);
 
            //Atribuir uma nova classe ao elemento de msg do usuario. 
            elMsg.setAttribute("class","sucesso");
