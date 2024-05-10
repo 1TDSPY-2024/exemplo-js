@@ -2,25 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-    
-}
+    }
 
-#cabecalho{
-  display: flex;
-  justify-content: space-between;
+    .sucesso{
+      color:#0b700b;
+      font-weight: 500;
+      background-color: #8bea8b;
+      border: 2px solid #0b700b;
+    }
 
-  h1{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 200px;
-  }
-
-=======
-}
-
-#cabecalho{
-    background-color: aquamarine;
-    height: 190px;
->>>>>>> 7b437d9ba520a2ab22f1417b03e772dd0841151a
-}
+    .erro{
+      color:#c61523;
+      font-weight: 500;
+      background-color: #f38a8a;
+      border: 2px solid #f3081c;
+    }

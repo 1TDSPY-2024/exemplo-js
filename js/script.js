@@ -1,17 +1,16 @@
-// // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
-// //Por exemplo:
-// //a = "Joaquim";
-// // var eval = nome;
-// // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas,
-// // caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos 
-// // indesejados e erros silenciosos, tornando o código mais seguro e previsível.
+"use strict";
+// Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
+//Por exemplo:
+//a = "Joaquim";
+// var eval = nome;
+// Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
-// //Capturar o botão testar através do id com o objeto document do DOM.
-// // const btnElemento = document.getElementById("botao");
-// // //Atrelar ao botão um evento de click.
-// // btnElemento.addEventListener("click",function(){
-// //     console.log("Testando o botão...");
-// // });
+//Capturar o botão testar através do id com o objeto document do DOM.
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click.
+// btnElemento.addEventListener("click",function(){
+//     console.log("Testando o botão...");
+// });
 
 
 // // Hoisting
@@ -74,17 +73,18 @@
 // console.log(obj.idade);
 // console.log(obj.devedor);
 // console.log(obj["nome"]);
-// // //Quero carregar um atributo do objeto utilizando uma variável
+// //Quero carregar um atributo do objeto utilizando uma variável
 // let atributo = "idade";
 // console.log("ATRIBUTO VARIADO : " + obj[atributo]);
-// // //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
+// //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
 // obj = {...obj, cidade: "São Paulo", estado: "SP"};
 // console.log(obj);
 
-// // //DESTRUCTURING
+//DESTRUCTURING
 // const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
 
 // const {nome, idade, cidade} = pessoa;
+
 // console.log(nome);
 // console.log(idade);
 // console.log(cidade);
@@ -95,12 +95,12 @@
 // let numero = parseInt(strNumero);
 // console.log(numero); // Saída: 10 (número)
 
-// // // Converter número para string
+// // Converter número para string
 // let numeroStr = 20;
 // let strNumero2 = numeroStr.toString();
 // console.log(strNumero2); // Saída: "20" (string)
 
-// // // Converter para booleano
+// // Converter para booleano
 // let valor = 0;
 // let booleano = Boolean(valor);
 // console.log(booleano); // Saída: false (0 é considerado false)
@@ -116,9 +116,9 @@
 // //     Se a condição for avaliada como falsa, a expressão_se_falsa será executada.
 // // Por exemplo:
 
-// let idade = 20;
-// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
-// console.log(result);
+// // let idade = 20;
+// // let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// // console.log(result);
 
 // // Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
 
@@ -229,51 +229,104 @@
 
 // Exercício 1 - Variáveis e Hoisting:
 // Qual será o valor de nome após a execução do código abaixo?
+// "use strict";
+// var nome = "Joaquim";
+// if (true) {
+//     let nome = "João";
+// }
+// console.log(nome);
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+// let estrito;
+// console.log(estrito);
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
+// let str = "Olá, mundo!";
+
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
 
+
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+// let obj = { nome: "João", idade: 25, devedor: true };
+// console.log(obj.idade); 
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
+
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
+// let idade = 20;
+// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// console.log(result);
 
 // Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
+// let age = 20;
+
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
+// }
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
+//Criando uma lista de usuários:
+
 let listaUsuarios = [
     {emailUsuario:"joao@email.com",senhaUsuario:"123456"},
     {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"felipe@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"felps@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"ferpson@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"seiki@email.com",senhaUsuario:"123456"}
-]
+    {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
+    {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
+];
 
 // listaUsuarios.forEach(function(usuario){
-//     if(usuario.emailUsuario == "felipe@email.com"){
-//         console.log(usuario.emailUsuario)
-//     }   
-// })
+//     if(usuario.emailUsuario == "joaquim@email.com"){
+//         console.log(usuario.emailUsuario);
+//     }
+// });
 
-for (let x = 0; x < listaUsuarios.length; x++){
-    if(listaUsuarios[x].emailUsuario == "felipe@email.com"){
-        console.log("Usuario validado!");
+function validaCampos(input1,input2) {
+   
+    //Recuperando o elemento da msg do usuario.
+    const elMsg = document.querySelector(".valida");
+    
+    for (let x = 0; x < listaUsuarios.length; x++) {
+        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+
+            //Criando um objeto no localStorage
+            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+
+           //Atribuir uma nova classe ao elemento de msg do usuario. 
+           elMsg.setAttribute("class","sucesso");
+           elMsg.innerText = "Login realizado com SUCESSSO!";
+
+           setTimeout(()=>{
+                elMsg.setAttribute("class","valida");
+                elMsg.innerText = "";
+                window.location.href = "../status/sucesso.html";
+           },3000);
+            return false; 
+        }
     }
+
+    elMsg.setAttribute("class","erro");
+    elMsg.innerText = "Nome de usuário ou senha incorretos!";
+    setTimeout(()=>{
+        elMsg.setAttribute("class","valida");
+        elMsg.innerText = "";
+        window.location.href = "../status/erro.html";
+   },3000);
+    return false;
 }
