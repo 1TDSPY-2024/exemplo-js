@@ -1,22 +1,23 @@
-// //"use strict";
-// // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
-// //Por exemplo:
-// //a = "Joaquim";
-// // var eval = nome;
-// // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
+"use strict";
+// Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
+//Por exemplo:
+//a = "Joaquim";
+// var eval = nome;
+// Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
-
-// const btnElemento = document.getElementById('botao')
-// btnElemento.addEventListener("click", () => {
-//     console.log("testando o botao...")
-// }
-// )
+//Capturar o botão testar através do id com o objeto document do DOM.
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click.
+// btnElemento.addEventListener("click",function(){
+//     console.log("Testando o botão...");
+// });
 
 
 // // Hoisting
 // var nome = "Joaquim";
 
-// if (true) {
+// if(true)
+// {
 //     let nome = "João";
 // }
 
@@ -54,7 +55,7 @@
 
 // // Array
 // let arr1 = [1, 2, 3, 4, 5];
-// let arr2 = [6, 7, 8, 9, 10];
+// let arr2 = [6,7,8,9,10];
 // console.log(arr1);
 // console.table(arr1);
 // // Mesclar Arrays com concat()
@@ -65,11 +66,7 @@
 // console.log(arr4);
 
 // // Object
-// let obj = {
-//     nome: "João",
-//     idade: 25,
-//     devedor: true
-// };
+// let obj = { nome: "João", idade: 25, devedor: true};
 // console.log(obj);
 // console.table(obj);
 // console.log(obj.nome);
@@ -80,20 +77,17 @@
 // let atributo = "idade";
 // console.log("ATRIBUTO VARIADO : " + obj[atributo]);
 // //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
-// obj = {
-//     ...obj,
-//     cidade: "São Paulo",
-//     estado: "SP"
-// };
+// obj = {...obj, cidade: "São Paulo", estado: "SP"};
 // console.log(obj);
 
-// //DESTRUCTURING
-// // const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
+//DESTRUCTURING
+// const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
 
-// // const {nome, idade, cidade} = pessoa;
-// // console.log(nome);
-// // console.log(idade);
-// // console.log(cidade);
+// const {nome, idade, cidade} = pessoa;
+
+// console.log(nome);
+// console.log(idade);
+// console.log(cidade);
 
 // // Conversão entre tipos de dados:
 // // Converter string para número
@@ -122,9 +116,9 @@
 // //     Se a condição for avaliada como falsa, a expressão_se_falsa será executada.
 // // Por exemplo:
 
-// let idade = 20;
-// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
-// console.log(result);
+// // let idade = 20;
+// // let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// // console.log(result);
 
 // // Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
 
@@ -159,167 +153,200 @@
 //     console.log("Nota F");
 // }
 
-// // Operadores de Comparação:
-// // Igualdade (==):
-// // Verifica se dois valores são iguais, convertendo os tipos, se necessário.
-// // let x = 5;
-// // let y = "5";
-// // console.log(x == y); // Saída: true
+// Operadores de Comparação:
+// Igualdade (==):
+// Verifica se dois valores são iguais, convertendo os tipos, se necessário.
+// let x = 5;
+// let y = "5";
+// console.log(x == y); // Saída: true
 
-// // Igualdade Estrita (===):
-// // Verifica se dois valores são iguais e do mesmo tipo.
-// // let x = 5;
-// // let y = "5";
-// // console.log(x === y); // Saída: false
+// Igualdade Estrita (===):
+// Verifica se dois valores são iguais e do mesmo tipo.
+// let x = 5;
+// let y = "5";
+// console.log(x === y); // Saída: false
 
 
-// // Diferente (!=):
-// // Verifica se dois valores não são iguais, convertendo os tipos, se necessário.
-// // let x = 5;
-// // let y = "5";
-// // console.log(x != y); // Saída: false
+// Diferente (!=):
+// Verifica se dois valores não são iguais, convertendo os tipos, se necessário.
+// let x = 5;
+// let y = "5";
+// console.log(x != y); // Saída: false
 
-// // Diferente Estrito (!==):
-// // Verifica se dois valores não são iguais ou não do mesmo tipo.
-// // let x = 5;
-// // let y = "5";
-// // console.log(x !== y); // Saída: true
+// Diferente Estrito (!==):
+// Verifica se dois valores não são iguais ou não do mesmo tipo.
+// let x = 5;
+// let y = "5";
+// console.log(x !== y); // Saída: true
 
-// // Maior que (>):
-// // Verifica se o operando da esquerda é maior que o operando da direita.
-// // let x = 10;
-// // let y = 5;
-// // console.log(x > y); // Saída: true
+// Maior que (>):
+// Verifica se o operando da esquerda é maior que o operando da direita.
+// let x = 10;
+// let y = 5;
+// console.log(x > y); // Saída: true
 
-// // Maior ou igual (>=):
-// // Verifica se o operando da esquerda é maior ou igual ao operando da direita.
-// // let x = 10;
-// // let y = 10;
-// // console.log(x >= y); // Saída: true
+// Maior ou igual (>=):
+// Verifica se o operando da esquerda é maior ou igual ao operando da direita.
+// let x = 10;
+// let y = 10;
+// console.log(x >= y); // Saída: true
 
-// // Menor que (<):
-// // Verifica se o operando da esquerda é menor que o operando da direita.
-// // let x = 5;
-// // let y = 10;
-// // console.log(x < y); // Saída: true
+// Menor que (<):
+// Verifica se o operando da esquerda é menor que o operando da direita.
+// let x = 5;
+// let y = 10;
+// console.log(x < y); // Saída: true
 
-// // Menor ou igual (<=):
-// // Verifica se o operando da esquerda é menor ou igual ao operando da direita.
-// // let x = 5;
-// // let y = 5;
-// // console.log(x <= y); // Saída: true
+// Menor ou igual (<=):
+// Verifica se o operando da esquerda é menor ou igual ao operando da direita.
+// let x = 5;
+// let y = 5;
+// console.log(x <= y); // Saída: true
 
-// // Operadores Lógicos:
+// Operadores Lógicos:
 
-// // E lógico (&&):
-// // Retorna verdadeiro se ambos os operandos forem verdadeiros.
-// // let x = 10;
-// // let y = 5;
-// // console.log(x > 5 && y < 10); // Saída: true
+// E lógico (&&):
+// Retorna verdadeiro se ambos os operandos forem verdadeiros.
+// let x = 10;
+// let y = 5;
+// console.log(x > 5 && y < 10); // Saída: true
 
-// //     OU lógico (||):
-// //         Retorna verdadeiro se pelo menos um dos operandos for verdadeiro.
-// // let x = 10;
-// // let y = 5;
-// // console.log(x > 5 || y > 10); // Saída: true
+//     OU lógico (||):
+//         Retorna verdadeiro se pelo menos um dos operandos for verdadeiro.
+// let x = 10;
+// let y = 5;
+// console.log(x > 5 || y > 10); // Saída: true
 
-// //     NÃO lógico (!):
-// //         Inverte o valor do operando; se for verdadeiro, retorna falso e vice-versa.
-// // let x = 10;
-// // console.log(!(x > 5)); // Saída: false
+//     NÃO lógico (!):
+//         Inverte o valor do operando; se for verdadeiro, retorna falso e vice-versa.
+// let x = 10;
+// console.log(!(x > 5)); // Saída: false
 
-// // Operadores Relacionais:
-// // Os operadores relacionais são os mesmos que os operadores de comparação, ou seja: ==, ===, !=, !==, >, >=, <, <=.
+// Operadores Relacionais:
+// Os operadores relacionais são os mesmos que os operadores de comparação, ou seja: ==, ===, !=, !==, >, >=, <, <=.
 
-// // EXERCÍCIOS
+// EXERCÍCIOS
 
-// // Exercício 1 - Variáveis e Hoisting:
-// // Qual será o valor de nome após a execução do código abaixo?
+// Exercício 1 - Variáveis e Hoisting:
+// Qual será o valor de nome após a execução do código abaixo?
+// "use strict";
+// var nome = "Joaquim";
+// if (true) {
+//     let nome = "João";
+// }
+// console.log(nome);
 
-// // Exercício 2 - Declaração de Variáveis:
-// // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
-// let nomeDoIndividuo;
-// console.log(nomeDoIndividuo)
+// Exercício 2 - Declaração de Variáveis:
+// Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+// let estrito;
+// console.log(estrito);
 
-// // Exercício 3 - Tipos de Dados:
-// // Qual é o tipo de dado da variável str?
-// // Resposta: texto
+// Exercício 3 - Tipos de Dados:
+// Qual é o tipo de dado da variável str?
+// let str = "Olá, mundo!";
 
-// // Exercício 4 - Mesclar Arrays:
-// // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
-// let arrConcatenado = [...arr1, ...arr2]
 
-// // Exercício 5 - Acesso a Propriedades de Objetos:
-// // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
-// console.log(obj.idade)
+// Exercício 4 - Mesclar Arrays:
+// Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
 
-// // Exercício 6 - Atributo Variável de Objetos:
-// // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
-// console.log(obj.cidade)
 
-// // Exercício 7 - Conversão de String para Número:
-// // Converta a string "10" em um número e imprima o resultado no console.
+// Exercício 5 - Acesso a Propriedades de Objetos:
+// Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+// let obj = { nome: "João", idade: 25, devedor: true };
+// console.log(obj.idade); 
 
-// // Exercício 8 - Estrutura Condicional com Operadores:
-// // Qual será a saída do código abaixo?
+// Exercício 6 - Atributo Variável de Objetos:
+// Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
 
-// // Exercício 9 - Estrutura Condicional Tradicional:
-// // Qual será a saída do código abaixo?
 
-// // Exercício 10 - Mesclar Arrays com Spread:
-// // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+// Exercício 7 - Conversão de String para Número:
+// Converta a string "10" em um número e imprima o resultado no console.
 
-// // Criando lista de usuarios:
-let listaUsuarios = [ 
-    {nomeUsuario: "Joao", emailUsuario:"joao@email.com", senhaUsuario:"senhaJoao"}, 
-    {nomeUsuario: "Roberto", emailUsuario:"roberto@email.com", senhaUsuario:"senhaMaria"} 
+// Exercício 8 - Estrutura Condicional com Operadores:
+// Qual será a saída do código abaixo?
+// let idade = 20;
+// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// console.log(result);
+
+// Exercício 9 - Estrutura Condicional Tradicional:
+// Qual será a saída do código abaixo?
+// let age = 20;
+
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
+// }
+
+// Exercício 10 - Mesclar Arrays com Spread:
+// Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+
+//Criando uma lista de usuários:
+
+let listaUsuarios = [
+    {nomeUsuario : "Joao", emailUsuario:"joao@email.com",senhaUsuario:"123456"},
+    {nomeUsuario : "Jose", emailUsuario:"jose@email.com",senhaUsuario:"123456"},
+    {nomeUsuario : "Joaquim", emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
+    {nomeUsuario : "Maria", emailUsuario:"maria@email.com",senhaUsuario:"123456"},
+    {nomeUsuario : "Manoel", emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
 ];
+
+const alteraVisao = (inputSenha)=>{
+    if(inputSenha.type == "password"){
+        inputSenha.setAttribute("type","text");
+    }else{
+        inputSenha.setAttribute("type","password");
+    }
+}
+
 
 let iconEye = document.querySelector("i");
 iconEye.addEventListener('click', function(){
+    
     let inputSenha = document.querySelector("#idSenha");
 
-    if(this.className == "fa-regular fa-eye-slash") {
-        this.setAttribute("class", "fa-regular fa-eye");
-        inputSenha.type="text";
-    } else {
-        this.setAttribute("class", "fa-regular fa-eye");
-        inputSenha.type="password";
+    if(this.className == "fa-regular fa-eye-slash" ){
+        this.setAttribute("class","fa-regular fa-eye");
+        alteraVisao(inputSenha);
+    }else{
+        this.setAttribute("class","fa-regular fa-eye-slash");
+        alteraVisao(inputSenha);
     }
-
 });
 
-
-function validaCampos(input1, input2) {
-    
+function validaCampos(input1,input2) {
+   
+    //Recuperando o elemento da msg do usuario.
     const elMsg = document.querySelector(".valida");
     
-    for(let x = 0; x < listaUsuarios.length; x++) {
-        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)) {
-            
-            elMsg.setAttribute("class", "sucesso");
-            elMsg.innerText = "Login realizado com SUCESSO!";
+    for (let x = 0; x < listaUsuarios.length; x++) {
+        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
 
-            setTimeout(() =>{
-                elMsg.setAttribute("class", "valida");
+            //Criando um objeto no localStorage
+            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+
+            const userToken = Math.random().toString(16).substring(2, 5)+Math.random().toString(16).substring(2, 5);
+
+            sessionStorage.setItem("token", userToken);
+           //Atribuir uma nova classe ao elemento de msg do usuario. 
+           elMsg.setAttribute("class","sucesso");
+           elMsg.innerText = "Login realizado com SUCESSSO!";
+
+           setTimeout(()=>{
+                elMsg.setAttribute("class","valida");
                 elMsg.innerText = "";
-            },3000)
-
-            return false;
-        };
+                window.location.href = "../status/sucesso.html";
+           },3000);
+            return false; 
+        }
     }
-    elMsg.setAttribute("class", "erro");
-    elMsg.innerText = "Usuário ou senha incorretos!";
+
+    elMsg.setAttribute("class","erro");
+    elMsg.innerText = "Nome de usuário ou senha incorretos!";
+    setTimeout(()=>{
+        elMsg.setAttribute("class","valida");
+        elMsg.innerText = "";
+        window.location.href = "../status/erro.html";
+   },3000);
     return false;
-}; 
-
-
-
-// console.log(listaUsuarios.forEach((usuario) => {
-//     if(usuario.emailUsuario == "EMAIL") {
-
-//     }
-//     console.log(usuario.emailUsuario);
-// }));
-
-
+}

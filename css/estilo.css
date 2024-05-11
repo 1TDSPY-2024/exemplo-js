@@ -2,12 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    }
 
-.sucesso {
-  color: green;
-}
+    .sucesso{
+      color:#0b700b;
+      font-weight: 500;
+      background-color: #8bea8b;
+      border: 2px solid #0b700b;
+    }
 
-.erro {
-  color: red;
-}
+    .erro{
+      color:#c61523;
+      font-weight: 500;
+      background-color: #f38a8a;
+      border: 2px solid #f3081c;
+    }
+
+    .fa-regular{
+      cursor: pointer;
+      user-select: none;
+    }
