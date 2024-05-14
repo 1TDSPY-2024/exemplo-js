@@ -26,10 +26,10 @@ let y = "5"
 //     console.log(false)
 // }
 
-let listaUsuarios = [
-    {emailUsuario: "lucas@gmail.com", senhaUsuario: "1013", userName: "luquinhas"},
-    {emailUsuario: "beto@gmail.com", senhaUsuario: "1013"},
-];
+
+if(localStorage.getItem("base-dados") == null){
+    localStorage.setItem("base-dados",JSON.stringify(listaUsuarios));
+}
 
 // console.log(listaUsuarios[1].emailUsuario);
 
@@ -55,6 +55,9 @@ iconOlho.addEventListener('click',function(){
 //console.log(Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2));
 
 function validaCampos(input1, input2){
+
+    let listaUsuarios = JSON.parse(localStorage.getItem("baseDados"));
+
     const elMsg = document.querySelector(".valida");
 
     for(let x = 0; x < listaUsuarios.length; x++){
