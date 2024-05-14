@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <h2>Cadastro de Pessoas de Fora do Sistema</h2>
+    <div>
+        <form action="#" method="get" onsubmit="return false">
+            <fieldset>
+                <legend>REGISTRO</legend>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div>
+                        <label for="idNome">Nome:</label>
+                        <input type="text" name="txtNm" id="idNome" placeholder="Digite seu nome" required minlength="3">
+                    </div>
+                    <div>
+                        <label for="idCpf">CPF:</label>
+                        <input type="text" name="txtCpf" id="idCpf" placeholder="000.000.000-00" required minlength="14">
+                    </div>
+                    <!-- <div>
+                        <label for="idGen">Gênero:</label>
+                        <select name="lstGen" id="idGen">
+                            <option value="0">Selecione uma opção</option>
+                            <option value="m">Masculino</option>
+                            <option value="f">Feminino</option>
+                            <option value="o">Outros</option>
+                        </select>
+                    </div> -->
+                    <div>
+                    <fieldset>
+                        <legend>Gênero</legend>
+                        <input type="radio" name="rdGen" id="rdGenM" value="m" checked>Masculino
+                        <input type="radio" name="rdGen" id="rdGenF" value="f">Feminino
+                        <input type="radio" name="rdGen" id="rdGenO" value="o">Outros
+                    </fieldset>
+                </div>
+                </fieldset>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
