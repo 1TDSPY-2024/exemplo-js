@@ -284,18 +284,14 @@
 //Criando uma lista de usuários:
 
 let listaUsuarios = [
-    {emailUsuario:"joao@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
+    {txtNm:"João das Couves",txtCpf:"02345678911",rdGen:"m",txtEmail:"jo@email.com",txtSenha:"123456"},
+    {txtNm:"Mario Willians",txtCpf:"02323122112",rdGen:"m",txtEmail:"ma@email.com",txtSenha:"123456"},
+    {txtNm:"Luna Chaves",txtCpf:"03234443265",rdGen:"f",txtEmail:"lu@email.com",txtSenha:"123456"},
 ];
 
-// listaUsuarios.forEach(function(usuario){
-//     if(usuario.emailUsuario == "joaquim@email.com"){
-//         console.log(usuario.emailUsuario);
-//     }
-// });
+if(localStorage.getItem("base-dados") == null){
+    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios))
+}
 
 let iconEye = document.querySelector("i")
 let inputSenha = document.querySelector("#idSenha")
@@ -311,12 +307,15 @@ iconEye.addEventListener('click', function(){
 }) 
 
 function validaCampos(input1,input2) {
+
+    //recuperar a base de dados
+    let listaUsuarios = JSON.parse(localStorage.getItem("base-dados"))
    
     //Recuperando o elemento da msg do usuario.
     const elMsg = document.querySelector(".valida");
     
     for (let x = 0; x < listaUsuarios.length; x++) {
-        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+        if((listaUsuarios[x].txtEmail == input1.value) && (listaUsuarios[x].txtSenha == input2.value)){
 
             //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));

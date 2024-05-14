@@ -7,7 +7,7 @@ let tokenUser = sessionStorage.getItem("token")
 if(tokenUser != "" && tokenUser != undefined){ 
    const elViewUser = document.querySelector("#view-user");
    const usuario = JSON.parse(localStorage.getItem("usuario-logado"));
-   elViewUser.innerText = usuario.emailUsuario;
+   elViewUser.innerText = usuario.txtEmail;
 
 const elLogoutUser = document.querySelector("#logout-user");
 elLogoutUser.addEventListener("click",()=>{
