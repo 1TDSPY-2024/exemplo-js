@@ -283,20 +283,13 @@
 
 //Criando uma lista de usuários:
 
-let listaUsuarios = [
-    {nomeUsuario : "Joao", emailUsuario:"joao@email.com",senhaUsuario:"123456"},
-    {nomeUsuario : "Jose", emailUsuario:"jose@email.com",senhaUsuario:"123456"},
-    {nomeUsuario : "Joaquim", emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
-    {nomeUsuario : "Maria", emailUsuario:"maria@email.com",senhaUsuario:"123456"},
-    {nomeUsuario : "Manoel", emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
-];
+// let listaUsuarios = [
+//     {txtNm : "Joao", txtCpf : "4125735485", rdGen: "m", txtEmail:"joao@email.com", txtSenha:"123456"},
+// ];
 
-const alteraVisao = (inputSenha)=>{
-    if(inputSenha.type == "password"){
-        inputSenha.setAttribute("type","text");
-    }else{
-        inputSenha.setAttribute("type","password");
-    }
+
+if(localStorage.getItem("base-dados") == null) {
+    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
 }
 
 
@@ -307,20 +300,23 @@ iconEye.addEventListener('click', function(){
 
     if(this.className == "fa-regular fa-eye-slash" ){
         this.setAttribute("class","fa-regular fa-eye");
-        alteraVisao(inputSenha);
+        inputSenha.setAttribute("type","text");
     }else{
         this.setAttribute("class","fa-regular fa-eye-slash");
-        alteraVisao(inputSenha);
+        inputSenha.setAttribute("type","password");
     }
 });
 
 function validaCampos(input1,input2) {
+
+    // Recuperando a base de dados local
+    const listaUsuarios = JSON.parse(localStorage.getItem("base-dados"))
    
     //Recuperando o elemento da msg do usuario.
     const elMsg = document.querySelector(".valida");
     
     for (let x = 0; x < listaUsuarios.length; x++) {
-        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+        if((listaUsuarios[x].txtEmail == input1.value) && (listaUsuarios[x].txtSenha == input2.value)){
 
             //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
