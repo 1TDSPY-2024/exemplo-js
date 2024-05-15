@@ -1,17 +1,55 @@
 //Recuperando o token através do sessionStorage
-let tokenUser = sessionStorage.getItem("token");
-if(tokenUser != "" && tokenUser != undefined){ 
-    //Recuperando o objeto do usuario logado.
-    const usuario = JSON.parse(localStorage.getItem("usuario-logado"));
- const elViewUser = document.querySelector("#view-user");
- elViewUser.innerText = usuario.emailUsuario;
-
- const elLogoutUser = document.querySelector("#logout-user");
- elLogoutUser.addEventListener("click",()=>{
-    localStorage.removeItem("usuario-logado");
-    window.location.href = "../index.html";
- });
-}
-else{
-    window.location.href = "../index.html";
-}
+const registraUsuario = (
+    inputNome,
+    inputCpf,
+    inputGen,
+    inputEmail,
+    inputSenha,
+    inputSenhaVerifica
+  ) => {
+    if (inputSenha.value == inputSenhaVerifica.value) {
+      //Deixando o label em verde porque as senhas conferem.
+      document
+        .querySelector("label[for=idConfirmaSenha]")
+        .setAttribute("class", "sucesso");
+  
+      //Voltando o campo ao normal quando recebe o foco;
+      inputSenhaVerifica.addEventListener("focus", () => {
+        document
+          .querySelector("label[for=idConfirmaSenha]")
+          .setAttribute("class", "");
+      });
+  
+      const usuario = {
+        nome: inputNome.value,
+        cpf: inputCpf.value,
+        genero: inputGen.value,
+        email: inputEmail.value,
+        senha: inputSenha.value,
+      };
+  
+      //Recupera o banco do localStorage e adiciona o objeto na listaUsuários:
+      let listaUsuarios = JSON.parse(localStorage.getItem("banco-dados")) || [];
+  
+      //Adicionando de fato o objeto na lista com o método push;
+      listaUsuarios.push(usuario);
+  
+      //Adicionando a listaUsuarios novamente no LocalStorage:
+      localStorage.setItem("banco-dados", JSON.stringify(listaUsuarios));
+  
+      return false;
+    } else {
+      //Deixando o label em vermelho porque as senhas não conferem.
+      document
+        .querySelector("label[for=idConfirmaSenha]")
+        .setAttribute("class", "erro");
+      //Voltando o campo ao normal quando recebe o foco;
+      inputSenhaVerifica.addEventListener("focus", () => {
+        document
+          .querySelector("label[for=idConfirmaSenha]")
+          .setAttribute("class", "");
+      });
+      return false;
+    }
+  };
+  
