@@ -291,14 +291,16 @@ console.log(arrConcatenado);
 let arr4 = {...arr1, ...arr2};
 console.log(arr4);
 
-let listaUsuarios = [
-    {emailUsuario:"joao@email.com",senhaUsuario : "1234"},
-    {emailUsuario:"jose@email.com",senhaUsuario : "4312"},
-    {emailUsuario:"maria@email.com",senhaUsuario : "5312"},
-    {emailUsuario:"marta@email.com",senhaUsuario : "5212"},
-    {emailUsuario:"manoel@email.com",senhaUsuario : "5252"}
-];
 
+// let listaUser = [
+//     {txtNm:"Joao das Couves", txtCpf:"12345678900", lstGen:"m", txtEmail:"joao@email.com",txtSenha : "1234"},
+//     {txtNm:"Mario Willians", txtCpf:"98765432100", lstGen:"m", txtEmail:"mario@email.com",txtSenha : "1234"},
+
+// ];
+//inserindo lista no localStorage se ela nao existir;
+if(localStorage.getItem("listaUser") == null){
+    localStorage.setItem("listaUser"), JSON.stringify(listaUser)
+}
 
 // listaUsuarios.forEach(function(usuario){   //aqui ele roda todos os itens independente de ter achado o item
 //     if(usuario.emailUsuario == "maria@email.com"){
@@ -318,17 +320,19 @@ iconEye.addEventListener('click', function(){
     }
 })
 
+let listaUser = JSON.parse(localStorage.getItem("listaUser"))
+
 
 function validaCampos(input1,input2) {
    
     //Recuperando o elemento da msg do usuario.
     const elMsg = document.querySelector(".valida");
     
-    for (let x = 0; x < listaUsuarios.length; x++) {
-        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+    for (let x = 0; x < listaUser.length; x++) {
+        if((listaUser[x].txtEmail== input1.value) && (listaUser[x].txtSenha == input2.value)){
 
             //Criando um objeto no localStorage
-            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+            localStorage.setItem("usuario-logado", JSON.stringify(listaUser[x]));
 
             const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
 

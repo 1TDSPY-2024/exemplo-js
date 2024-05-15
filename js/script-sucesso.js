@@ -5,7 +5,7 @@
 
  if(usuario){ 
  const elViewUser = document.querySelector("#view-user");
- elViewUser.innerText = usuario.emailUsuario;
+ elViewUser.innerText = usuario.txtEmail;
 
  const elLogoutUser = document.querySelector("#logout-user");
  elLogoutUser.addEventListener("click",()=>{
