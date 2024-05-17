@@ -1,5 +1,5 @@
 //  "use strict";
-// Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
+// Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas.
 //Por exemplo:
 // a = "Joaquim";
 // console.log(a);
@@ -13,7 +13,6 @@
 // btnElemento.addEventListener("click",function(){
 //     console.log("Testando o botão...");
 // });
-
 
 // Hoisting
 var nome = "Joaquim";
@@ -57,7 +56,7 @@ console.log(bool);
 
 // Array
 let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6,7,8,9,10];
+let arr2 = [6, 7, 8, 9, 10];
 console.log(arr1);
 console.table(arr1);
 // Mesclar Arrays com concat()
@@ -83,7 +82,7 @@ console.log(arr4);
 // console.log(obj);
 
 //DESTRUCTURING
-const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
+const pessoa = { nome2: "Maria", idade2: 34, cidade: "Florianópolis" };
 
 // const {nome, idade, cidade} = pessoa;
 // console.log(nome);
@@ -167,7 +166,6 @@ console.log(booleano); // Saída: false (0 é considerado false)
 // let y = "5";
 // console.log(x === y); // Saída: false
 
-
 // Diferente (!=):
 // Verifica se dois valores não são iguais, convertendo os tipos, se necessário.
 // let x = 5;
@@ -244,17 +242,14 @@ console.log(booleano); // Saída: false (0 é considerado false)
 // Qual é o tipo de dado da variável str?
 // let str = "Olá, mundo!";
 
-
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
-
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
-
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
@@ -279,83 +274,127 @@ console.log(booleano); // Saída: false (0 é considerado false)
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
 //Criando uma lista de usuários:
-// let listaUsuarios = [
-//     {txtNm:"João das Couves",txtCpf:"12345678900", rdGen:"m", txtEmail:"jo@email.com",txtSenha:"123456"},
-//     {txtNm:"Mario Willians",txtCpf:"08745342870", rdGen:"m", txtEmail:"ma@email.com",txtSenha:"123456"},
-//     {txtNm:"Luna Chaves",txtCpf:"45900654398", rdGen:"f", txtEmail:"lu@email.com",txtSenha:"123456"},
-//     {txtNm:"Tony Beto",txtCpf:"126890678675", rdGen:"m", txtEmail:"to@email.com",txtSenha:"123456"},
-//     {txtNm:"Deliz Ribeiro",txtCpf:"62345698712", rdGen:"f", txtEmail:"de@email.com",txtSenha:"123456"},
-// ];
+let listaUsuarios = [
+  {
+    txtNm: "João das Couves",
+    txtCpf: "12345678900",
+    rdGen: "m",
+    txtEmail: "jo@email.com",
+    txtSenha: "123456",
+  },
+  {
+    txtNm: "Mario Willians",
+    txtCpf: "08745342870",
+    rdGen: "m",
+    txtEmail: "ma@email.com",
+    txtSenha: "123456",
+  },
+  {
+    txtNm: "Luna Chaves",
+    txtCpf: "45900654398",
+    rdGen: "f",
+    txtEmail: "lu@email.com",
+    txtSenha: "123456",
+  },
+  {
+    txtNm: "Tony Beto",
+    txtCpf: "126890678675",
+    rdGen: "m",
+    txtEmail: "to@email.com",
+    txtSenha: "123456",
+  },
+  {
+    txtNm: "Deliz Ribeiro",
+    txtCpf: "62345698712",
+    rdGen: "f",
+    txtEmail: "de@email.com",
+    txtSenha: "123456",
+  },
+];
 
 //Inserindo a lista no localStorage se ela não existir;
-if(localStorage.getItem("base-dados") == null){
-    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
-} 
-
-
-
-const alteraVisao = (inputSenha)=>{
-    if(inputSenha.type == "password"){
-        inputSenha.setAttribute("type","text");
-    }else{
-        inputSenha.setAttribute("type","password");
-    }
+if (localStorage.getItem("base-dados") == null) {
+  localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
 }
 
+const alteraVisao = (inputSenha) => {
+  if (inputSenha.type == "password") {
+    inputSenha.setAttribute("type", "text");
+  } else {
+    inputSenha.setAttribute("type", "password");
+  }
+};
 
 let iconEye = document.querySelector("i");
-iconEye.addEventListener('click', function(){
-    
-    let inputSenha = document.querySelector("#idSenha");
+iconEye.addEventListener("click", function () {
+  let inputSenha = document.querySelector("#idSenha");
 
-    if(this.className == "fa-regular fa-eye-slash" ){
-        this.setAttribute("class","fa-regular fa-eye");
-        alteraVisao(inputSenha);
-    }else{
-        this.setAttribute("class","fa-regular fa-eye-slash");
-        alteraVisao(inputSenha);
-    }
+  if (this.className == "fa-regular fa-eye-slash") {
+    this.setAttribute("class", "fa-regular fa-eye");
+    alteraVisao(inputSenha);
+  } else {
+    this.setAttribute("class", "fa-regular fa-eye-slash");
+    alteraVisao(inputSenha);
+  }
 });
 
-function validaCampos(input1,input2) {
-   
+function validaCampos(input1, input2) {
+  //Recuperando a base de dados do localStorage:
+  let listaUsuarios = JSON.parse(localStorage.getItem("base-dados"));
 
-    //Recuperando a base de dados do localStorage:
-    let listaUsuarios = JSON.parse(localStorage.getItem("base-dados"));
+  //Recuperando o elemento da msg do usuario.
+  const elMsg = document.querySelector(".valida");
 
-    //Recuperando o elemento da msg do usuario.
-    const elMsg = document.querySelector(".valida");
-    
-    for (let x = 0; x < listaUsuarios.length; x++) {
-        if((listaUsuarios[x].txtEmail == input1.value) && (listaUsuarios[x].txtSenha == input2.value)){
+  for (let x = 0; x < listaUsuarios.length; x++) {
+    if (
+      listaUsuarios[x].txtEmail == input1.value &&
+      listaUsuarios[x].txtSenha == input2.value
+    ) {
+      //Criando um objeto no localStorage
+      localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
 
-            //Criando um objeto no localStorage
-            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+      //Criando o token de autenticação do usuário;
+      const tokenUser =
+        Math.random().toString(16).substring(2) +
+        Math.random().toString(16).substring(2);
+      //Criando o objeto na sessionStorage e guardando o token;
+      sessionStorage.setItem("token", tokenUser);
 
-            //Criando o token de autenticação do usuário;
-            const tokenUser = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);
-            //Criando o objeto na sessionStorage e guardando o token;
-            sessionStorage.setItem("token", tokenUser);
+      //Atribuir uma nova classe ao elemento de msg do usuario.
+      elMsg.setAttribute("class", "sucesso");
+      elMsg.innerText = "Login realizado com SUCESSSO!";
 
-           //Atribuir uma nova classe ao elemento de msg do usuario. 
-           elMsg.setAttribute("class","sucesso");
-           elMsg.innerText = "Login realizado com SUCESSSO!";
-
-           setTimeout(()=>{
-                elMsg.setAttribute("class","valida");
-                elMsg.innerText = "";
-                window.location.href = "../status/sucesso.html";
-           },3000);
-            return false; 
-        }
-    }
-
-    elMsg.setAttribute("class","erro");
-    elMsg.innerText = "Nome de usuário ou senha incorretos!";
-    setTimeout(()=>{
-        elMsg.setAttribute("class","valida");
+      setTimeout(() => {
+        elMsg.setAttribute("class", "valida");
         elMsg.innerText = "";
-        window.location.href = "../status/erro.html";
-   },3000);
-    return false;
+        window.location.href = "../status/sucesso.html";
+      }, 3000);
+      return false;
+    }
+  }
+
+  elMsg.setAttribute("class", "erro");
+  elMsg.innerText = "Nome de usuário ou senha incorretos!";
+  setTimeout(() => {
+    elMsg.setAttribute("class", "valida");
+    elMsg.innerText = "";
+    window.location.href = "../status/erro.html";
+  }, 3000);
+  return false;
 }
+//Recuperando o botão de login
+const btnLogin = document.querySelector("#login");
+//Recuperando o elemento dialog
+const modal = document.querySelector("dialog");
+//Atrelando um evento ao botão
+btnLogin.addEventListener("click", function (e) {
+  // console.log(e.target.innerText);
+  modal.showModal();
+});
+
+//Recuperando o botão de login
+const btnClose = document.querySelector("#close");
+//Atrelando um evento ao botão
+btnClose.addEventListener("click", function (e) {
+  modal.close();
+});
