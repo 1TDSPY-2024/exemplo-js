@@ -17,10 +17,8 @@
       background-color: #f38a8a;
       border: 2px solid #f3081c;
     }
+
     .fa-regular{
-      user-select: none;
-    }
-    .fa-regular:hover{
-      cursor:pointer;
+      cursor: pointer;
       user-select: none;
     }
