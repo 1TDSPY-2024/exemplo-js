@@ -2,11 +2,11 @@ const registraUsuario = (inputNome, inputCpf, inputGen, inputEmail, inputSenha, 
     
     if(inputSenha.value == inputConfirmaSenha.value) {
         const usuario = {
-            nome: inputNome,
-            cpf : inputCpf,
-            gen : inputGen,
-            email : inputEmail,
-            senha : inputSenha
+            txtNome: inputNome.value,
+            txtCpf : inputCpf.value,
+            gen : inputGen.value,
+            txtEmail : inputEmail.value,
+            txtSenha : inputSenha.value
         }
 
         let listaUsuarios = JSON.parse(localStorage.getItem("base-dados")) || [];

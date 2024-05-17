@@ -1,24 +1,74 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .sucesso{
-      color:#0b700b;
-      font-weight: 500;
-      background-color: #8bea8b;
-      border: 2px solid #0b700b;
-    }
+.sucesso{
+  color:#0b700b;
+  font-weight: 500;
+  background-color: #8bea8b;
+  border: 2px solid #0b700b;
+}
 
-    .erro{
-      color:#c61523;
-      font-weight: 500;
-      background-color: #f38a8a;
-      border: 2px solid #f3081c;
-    }
+.erro{
+  color:#c61523;
+  font-weight: 500;
+  background-color: #f38a8a;
+  border: 2px solid #f3081c;
+}
 
-    .fa-regular{
-      cursor: pointer;
-      user-select: none;
-    }
+.fa-regular{
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 70vh;
+  margin: 0 auto;
+  background-image:url(../img/pet-1280x854-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.form-group div {
+  margin: 1.5% auto;
+}
+
+.form-group label {
+  font-family: 'Poppins', sans serif;
+}
+
+.form-group input[type=email], input[type=password], input[type=text] {
+  display: block;
+  width: 40vw;
+  height: 10vh;
+  border-radius: 8px;
+  border: none;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .8);
+  outline-color: rgb(134, 123, 123);
+  padding-left: 10px;
+}
+
+button[type=submit] {
+  display: block;
+  width: 25vw;
+  height: 10vh;
+  border-radius: 5px;
+  border: none;
+  background-color: #f3081c;
+  color: beige;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .8);
+  outline-color: rgb(134, 123, 123);
+  cursor: pointer;
+  transition: all .4 ease;
+}
+
+button[type=submit]:hover {
+  background-color: #c61523;
+}
+

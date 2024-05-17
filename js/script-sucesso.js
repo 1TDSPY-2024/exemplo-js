@@ -5,7 +5,7 @@ if(tokenUser != "" && tokenUser != undefined) {
 
     if(usuario){ 
     const elViewUser = document.querySelector("#view-user");
-    elViewUser.innerText = usuario.nomeUsuario;
+    elViewUser.innerText = usuario.txtNome;
 
     const elLogoutUser = document.querySelector("#logout-user");
     elLogoutUser.addEventListener("click",()=>{
