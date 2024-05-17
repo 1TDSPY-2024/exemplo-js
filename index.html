@@ -7,27 +7,25 @@
     <link rel="stylesheet" href="./css/estilo.css">
     <title>JavaScript</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="./js/script.js" defer></script>
 
 </head>
 
 <body>
-    
-    <header id="topo">
-        <h1 id="titulo">JavaScript</h1>
-        <nav>
-            <ul>
-                <li class="link"><a href="#">JavaScript</a></li>
-                <li class="link"><a href="#">Java</a></li>
-                <li class="link"><a href="#">C#</a></li>
-            </ul>
-        </nav>
-    </header>
+
 
     <div>
         <h2>VALIDAÇÃO</h2>
+
+        <button id="login">LOGIN</button>
+
+        <dialog>
+
+            <button id="close">CLOSE</button>
         <div>
             <p class="valida"></p>
         </div>
@@ -35,29 +33,34 @@
             <form action="#" method="get" onsubmit="return validaCampos(this.idEmail,this.idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
-                    <div>
-                        <label for="idEmail">Email</label>
-                         <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+
+                    <div class="form-group">
+
+                        <div>
+                            <label for="idEmail">Email</label>
+                            <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                        </div>
+                        <div>
+                            <label for="idSenha">Senha</label>
+                            <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                            <i class="fa-regular fa-eye-slash"></i>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                            <label for="idLembrar">Lembrar-me</label>
+                        </div>
+                        <div>
+                            <button type="submit">Enviar</button>
+                        </div>
                     </div>
                     <div>
-                        <label for="idSenha">Senha</label>
-                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
-                        <i class="fa-regular fa-eye-slash"></i>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
-                        <label for="idLembrar">Lembrar-me</label>
-                    </div>
-                    <div>
-                        <button type="submit">Enviar</button>
-                    </div>
-                    <div>
-                        <p>Não possui cadastro ainda? <a href="./signup/signup.html">Clique aqui</a></p>
+                        <p>Não possui cadastro? <a href="./signup/signup.html">Clique aqui</a></p>
                     </div>
                 </fieldset>
             </form>
         </div>
     </div>
+</dialog>
+</body>
 
-</body>                     
 </html>
