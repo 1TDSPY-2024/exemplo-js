@@ -1,8 +1,10 @@
-"use strict";
+//  "use strict";
 // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
 //Por exemplo:
-//a = "Joaquim";
-// var eval = nome;
+// a = "Joaquim";
+// console.log(a);
+// var eval = "strict";
+// console.log(eval);
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
 //Capturar o botão testar através do id com o objeto document do DOM.
@@ -13,57 +15,57 @@
 // });
 
 
-// // Hoisting
-// var nome = "Joaquim";
+// Hoisting
+var nome = "Joaquim";
 
 // if(true)
 // {
 //     let nome = "João";
 // }
 
-// console.log(nome);
-// //Uso estrito, orbigatótio inicialilizar.
-// let estrito;
+console.log(nome);
+//Uso estrito, orbigatótio inicialilizar.
+let estrito;
 
 // // Declaração de variáveis (var, let, const):
 // // Usando var
 // var x = 10;
 // console.log(x);
 
-// // Usando let
-// let y = 20;
-// console.log(y);
+// Usando let
+let y = 20;
+console.log(y);
 
-// // Usando const (constante, valor não pode ser alterado)
-// const z = 30;
-// console.log(z);
-// // z = 20;
+// Usando const (constante, valor não pode ser alterado)
+const z = 30;
+console.log(z);
+// z = 20;
 
 // // Tipos de dados em JavaScript:
 // // Number
 // let num = 10;
 // console.log(num);
 
-// // String
-// let str = "Olá, mundo!";
-// console.log(str.charAt(0));
-// console.log(str.indexOf("Olá"));
+// String
+let str = "Olá, mundo!";
+console.log(str.charAt(0));
+console.log(str.indexOf("Olá"));
 
-// // Boolean
-// let bool = true;
-// console.log(bool);
+// Boolean
+let bool = true;
+console.log(bool);
 
-// // Array
-// let arr1 = [1, 2, 3, 4, 5];
-// let arr2 = [6,7,8,9,10];
-// console.log(arr1);
-// console.table(arr1);
-// // Mesclar Arrays com concat()
-// let arr3 = arr1.concat(arr2);
-// console.log(arr3);
-// // Mesclar Arrays com SPREAD
-// let arr4 = [...arr1, ...arr2];
-// console.log(arr4);
+// Array
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [6,7,8,9,10];
+console.log(arr1);
+console.table(arr1);
+// Mesclar Arrays com concat()
+let arr3 = arr1.concat(arr2);
+console.log(arr3);
+// Mesclar Arrays com SPREAD
+let arr4 = [...arr1, ...arr2];
+console.log(arr4);
 
 // // Object
 // let obj = { nome: "João", idade: 25, devedor: true};
@@ -81,10 +83,9 @@
 // console.log(obj);
 
 //DESTRUCTURING
-// const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
+const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
 
 // const {nome, idade, cidade} = pessoa;
-
 // console.log(nome);
 // console.log(idade);
 // console.log(cidade);
@@ -100,10 +101,10 @@
 // let strNumero2 = numeroStr.toString();
 // console.log(strNumero2); // Saída: "20" (string)
 
-// // Converter para booleano
-// let valor = 0;
-// let booleano = Boolean(valor);
-// console.log(booleano); // Saída: false (0 é considerado false)
+// Converter para booleano
+let valor = 0;
+let booleano = Boolean(valor);
+console.log(booleano); // Saída: false (0 é considerado false)
 
 // //Estruturas condicionais
 
@@ -238,8 +239,6 @@
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
-// let estrito;
-// console.log(estrito);
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
@@ -252,8 +251,6 @@
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
-// let obj = { nome: "João", idade: 25, devedor: true };
-// console.log(obj.idade); 
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
@@ -281,33 +278,6 @@
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
-const alteraVisao = (inputSenha)=>{
-    if(inputSenha.type == "password"){
-        inputSenha.setAttribute("type", "text");
-    } else {
-        inputSenha.setAttribute("type", "password");
-    }
-}
-
-let iconEye = document.querySelector("i");
- 
-iconEye.addEventListener('click', function(){
-    // Recuperando o elemento inputSenha do HTML
-    let inputSenha = document.querySelector("#idSenha");
-
-    if(this.className == "fa-regular fa-eye-slash"){
-        // setando uma nova classe para o ícone "i" iconEye
-        this.setAttribute("class", "fa-regular fa-eye");
-        alteraVisao(inputSenha);
-    } else {
-        this.setAttribute("class", "fa-regular fa-eye-slash");
-        alteraVisao(inputSenha);
-
-    }
-});
-
-
-
 //Criando uma lista de usuários:
 
 let listaUsuarios = [
@@ -318,60 +288,64 @@ let listaUsuarios = [
     {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
 ];
 
-// listaUsuarios.forEach(function(usuario){
-//     if(usuario.emailUsuario == "joaquim@email.com"){
-//         console.log(usuario.emailUsuario);
-//     }
-// });
+const alteraVisao = (inputSenha)=>{
+    if(inputSenha.type == "password"){
+        inputSenha.setAttribute("type","text");
+    }else{
+        inputSenha.setAttribute("type","password");
+    }
+}
 
-function validaCampos(input1,input2){
-    // Recuperando o elemento da mensagem do usuario.
-    // .valida é a classe do paragrafo no HTML
+
+let iconEye = document.querySelector("i");
+iconEye.addEventListener('click', function(){
+    
+    let inputSenha = document.querySelector("#idSenha");
+
+    if(this.className == "fa-regular fa-eye-slash" ){
+        this.setAttribute("class","fa-regular fa-eye");
+        alteraVisao(inputSenha);
+    }else{
+        this.setAttribute("class","fa-regular fa-eye-slash");
+        alteraVisao(inputSenha);
+    }
+});
+
+function validaCampos(input1,input2) {
+   
+    //Recuperando o elemento da msg do usuario.
     const elMsg = document.querySelector(".valida");
-
+    
     for (let x = 0; x < listaUsuarios.length; x++) {
         if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
 
-            //Criando um objeto no localStorag
-            // localStorage.setItem("chave-chave", "valor");
+            //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
 
-            // Criando o token de autenticação do usuário
-            const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
-            // Criando o objeto na sessionStorage e guardando o token;
+            //Criando o token de autenticação do usuário;
+            const tokenUser = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);
+            //Criando o objeto na sessionStorage e guardando o token;
             sessionStorage.setItem("token", tokenUser);
 
-            //Atribuir uma nova classe ao elemento de msg do usuario.
-            elMsg.setAttribute("class","sucesso");
-            // innerText - usado para capturar o texto entre as tags <p> e </p>
-            elMsg.innerText = "Login realizado com sucesso";
+           //Atribuir uma nova classe ao elemento de msg do usuario. 
+           elMsg.setAttribute("class","sucesso");
+           elMsg.innerText = "Login realizado com SUCESSSO!";
 
-            // Funcao temporizadora interna do JavaScript
-            // Configurada em milissegundos
-            // Ela será executada após 3000 milissegundos
-            setTimeout(() =>{
-                elMsg.setAttribute("class", "valida");
+           setTimeout(()=>{
+                elMsg.setAttribute("class","valida");
                 elMsg.innerText = "";
-                
-                // Redirecionamento do usuário para outra página
                 window.location.href = "../status/sucesso.html";
-            },3000);
-            return false;
+           },3000);
+            return false; 
         }
     }
 
-    //Atribuir uma nova classe ao elemento de msg do usuario.
     elMsg.setAttribute("class","erro");
-    // innerText - usado para capturar o texto entre as tags <p> e </p>
     elMsg.innerText = "Nome de usuário ou senha incorretos!";
-    setTimeout(() =>{
-        elMsg.setAttribute("class", "valida");
+    setTimeout(()=>{
+        elMsg.setAttribute("class","valida");
         elMsg.innerText = "";
-
-        // Redirecionamento do usuário para outra página
         window.location.href = "../status/erro.html";
-    },3000);
-
+   },3000);
     return false;
 }
-
