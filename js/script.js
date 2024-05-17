@@ -1,3 +1,7 @@
+let listaUsuarios = [
+    {txtNm : "Joao", txtCpf : "4125735485", rdGen: "m", txtEmail:"joao@email.com", txtSenha:"123456"},
+];
+
 if(localStorage.getItem("base-dados") == null) {
     localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
 }
