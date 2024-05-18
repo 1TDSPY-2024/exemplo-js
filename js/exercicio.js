@@ -26,21 +26,25 @@ let y = "5"
 //     console.log(false)
 // }
 
+let listaUsuarios = [
+    {userName : "Lucas", userEmail:"lucas@gmail.com", userSenha:"123"},
+]
 
-if(localStorage.getItem("base-dados") == null){
-    localStorage.setItem("base-dados",JSON.stringify(listaUsuarios));
+
+if(localStorage.getItem("base-dados") == null) {
+    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
 }
 
-// console.log(listaUsuarios[1].emailUsuario);
+// console.log(listaUsuarios[1].userEmail);
 
 // listaUsuarios.forEach(function(usuario){
-//     if(usuario.emailUsuario == "lucas@gmail.com"){
-//         console.log(usuario.emailUsuario)
+//     if(usuario.userEmail == "lucas@gmail.com"){
+//         console.log(usuario.userEmail)
 //     }
 // });
 
 let iconOlho = document.querySelector("i");
-let senha = document.querySelector("#idSenha");
+let senha = document.querySelector("#userSenha");
 iconOlho.addEventListener('click',function(){
     if(this.className == "fa-regular fa-eye-slash"){
         this.setAttribute("class", "fa-regular fa-eye");
@@ -56,12 +60,12 @@ iconOlho.addEventListener('click',function(){
 
 function validaCampos(input1, input2){
 
-    let listaUsuarios = JSON.parse(localStorage.getItem("baseDados"));
+    const listaUsuarios = JSON.parse(localStorage.getItem("base-dados"));
 
     const elMsg = document.querySelector(".valida");
 
     for(let x = 0; x < listaUsuarios.length; x++){
-        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+        if((listaUsuarios[x].userEmail == input1.value) && (listaUsuarios[x].userSenha == input2.value)){
 
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
             const tokenUser = Math.random().toString(16).substring(2)+Math.random().toString(16).substring(2);

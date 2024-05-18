@@ -1,16 +1,20 @@
 
 
 let tokenUser = sessionStorage.getItem("token");
+
 if(tokenUser != "" && tokenUser != undefined){ 
+
    const usuario = JSON.parse(localStorage.getItem("usuario-logado"));
+
    const elUsername = document.querySelector("#username");
+
    elUsername.innerText = usuario.userName;
 
    const elViewUser = document.querySelector("#view-user");
-   elViewUser.innerText = usuario.emailUsuario;
+   elViewUser.innerText = usuario.userEmail;
    
 
-   console.log(usuario.emailUsuario);
+   console.log(usuario.userEmail);
    console.log(usuario.userName);
    
 

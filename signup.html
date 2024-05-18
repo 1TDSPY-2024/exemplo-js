@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <script src="./js/exercicio.js" defer></script>
+    <script src="./js/signup.js" defer></script>
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <section>
         <h1>Cadastro</h1>
-        <form action="" method="get">
+        <form action="" method="get" onsubmit="return registrarUser(this.userName, this.userEmail, this.userSenha)">
             <section>
-                <label for="idNome">Nome:</label>
-                <input type="text" name="txtNm" id="idNome" placeholder="Seu Nome: " required>
-                <label for="idEmail">Email:</label>
-                <input type="email" id="idEmail" placeholder="Seu Email: " required>
-                <label for="idSenha">Senha</label>
-                <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                <label for="userName">Nome:</label>
+                <input type="text" id="userName" placeholder="Seu Nome: " required>
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" placeholder="Seu Email: " required>
+                <label for="userSenha">Senha</label>
+                <input type="password" name="userSenha" id="userSenha" placeholder="Digite sua senha">
                 <i class="fa-regular fa-eye-slash" role="button"></i>
             </section>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+            <div>
+                <p>Já possui cadastro? <a href="../index.html">Clique aqui  </a></p>
+            </div>
         </form>
     </section>
 </body>
