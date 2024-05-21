@@ -1,3 +1,7 @@
+let listaUsuarios = [
+    {txtNm : "Joao", txtCpf : "4125735485", rdGen: "m", txtEmail:"joao@email.com", txtSenha:"123456"},
+];
+
 if(localStorage.getItem("base-dados") == null) {
     localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
 }
@@ -34,6 +38,8 @@ function validaCampos(input1,input2) {
 
             const userToken = Math.random().toString(16).substring(2, 5)+Math.random().toString(16).substring(2, 5);
 
+            const userToken = Math.random().toString(16).substring(2, 5)+Math.random().toString(16).substring(2, 5);
+
             sessionStorage.setItem("token", userToken);
            //Atribuir uma nova classe ao elemento de msg do usuario. 
            elMsg.setAttribute("class","sucesso");
@@ -53,3 +59,23 @@ function validaCampos(input1,input2) {
    
     return false;
 }
+
+
+//Recuperando o botão de login
+const btnLogin = document.querySelector("#login");
+//Recuperando o elemento dialog
+ const modal = document.querySelector("dialog");
+ //Atrelando um evento ao botão
+ btnLogin.addEventListener("click", function(e){
+
+    // console.log(e.target.innerText);
+    modal.showModal();
+     
+ });
+
+ //Recuperando o botão de login
+const btnClose = document.querySelector("#close");
+ //Atrelando um evento ao botão
+btnClose.addEventListener("click", function(e){
+    modal.close();
+ });
