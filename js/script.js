@@ -1,10 +1,4 @@
-let listaUsuarios = [
-    {txtNm : "Joao", txtCpf : "4125735485", rdGen: "m", txtEmail:"joao@email.com", txtSenha:"123456"},
-];
 
-if(localStorage.getItem("base-dados") == null) {
-    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
-}
 
 
 let iconEye = document.querySelector("i");
@@ -21,6 +15,14 @@ iconEye.addEventListener('click', function(){
     }
 });
 
+
+
+if(!localStorage.getItem("base-dados")) {
+    let listaUsuarios = [
+        {txtNm : "Joao", txtCpf : "4125735485", rdGen: "m", txtEmail:"joao@email.com", txtSenha:"123456"},
+    ];
+    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
+}
 function validaCampos(input1,input2) {
 
     // Recuperando a base de dados local
@@ -35,8 +37,6 @@ function validaCampos(input1,input2) {
 
             //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUser[x]));
-
-            const userToken = Math.random().toString(16).substring(2, 5)+Math.random().toString(16).substring(2, 5);
 
             const userToken = Math.random().toString(16).substring(2, 5)+Math.random().toString(16).substring(2, 5);
 
