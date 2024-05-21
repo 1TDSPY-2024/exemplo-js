@@ -1,10 +1,8 @@
-//  "use strict";
+"use strict";
 // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
 //Por exemplo:
-// a = "Joaquim";
-// console.log(a);
-// var eval = "strict";
-// console.log(eval);
+//a = "Joaquim";
+// var eval = nome;
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
 //Capturar o botão testar através do id com o objeto document do DOM.
@@ -15,57 +13,57 @@
 // });
 
 
-// Hoisting
-var nome = "Joaquim";
+// // Hoisting
+// var nome = "Joaquim";
 
 // if(true)
 // {
 //     let nome = "João";
 // }
 
-console.log(nome);
-//Uso estrito, orbigatótio inicialilizar.
-let estrito;
+// console.log(nome);
+// //Uso estrito, orbigatótio inicialilizar.
+// let estrito;
 
 // // Declaração de variáveis (var, let, const):
 // // Usando var
 // var x = 10;
 // console.log(x);
 
-// Usando let
-let y = 20;
-console.log(y);
+// // Usando let
+// let y = 20;
+// console.log(y);
 
-// Usando const (constante, valor não pode ser alterado)
-const z = 30;
-console.log(z);
-// z = 20;
+// // Usando const (constante, valor não pode ser alterado)
+// const z = 30;
+// console.log(z);
+// // z = 20;
 
 // // Tipos de dados em JavaScript:
 // // Number
 // let num = 10;
 // console.log(num);
 
-// String
-let str = "Olá, mundo!";
-console.log(str.charAt(0));
-console.log(str.indexOf("Olá"));
+// // String
+// let str = "Olá, mundo!";
+// console.log(str.charAt(0));
+// console.log(str.indexOf("Olá"));
 
-// Boolean
-let bool = true;
-console.log(bool);
+// // Boolean
+// let bool = true;
+// console.log(bool);
 
-// Array
-let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6,7,8,9,10];
-console.log(arr1);
-console.table(arr1);
-// Mesclar Arrays com concat()
-let arr3 = arr1.concat(arr2);
-console.log(arr3);
-// Mesclar Arrays com SPREAD
-let arr4 = [...arr1, ...arr2];
-console.log(arr4);
+// // Array
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = [6,7,8,9,10];
+// console.log(arr1);
+// console.table(arr1);
+// // Mesclar Arrays com concat()
+// let arr3 = arr1.concat(arr2);
+// console.log(arr3);
+// // Mesclar Arrays com SPREAD
+// let arr4 = [...arr1, ...arr2];
+// console.log(arr4);
 
 // // Object
 // let obj = { nome: "João", idade: 25, devedor: true};
@@ -83,9 +81,10 @@ console.log(arr4);
 // console.log(obj);
 
 //DESTRUCTURING
-const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
+// const pessoa = {nome : 'Maria', idade: 34, cidade: 'Florianópolis'};
 
 // const {nome, idade, cidade} = pessoa;
+
 // console.log(nome);
 // console.log(idade);
 // console.log(cidade);
@@ -101,10 +100,10 @@ const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
 // let strNumero2 = numeroStr.toString();
 // console.log(strNumero2); // Saída: "20" (string)
 
-// Converter para booleano
-let valor = 0;
-let booleano = Boolean(valor);
-console.log(booleano); // Saída: false (0 é considerado false)
+// // Converter para booleano
+// let valor = 0;
+// let booleano = Boolean(valor);
+// console.log(booleano); // Saída: false (0 é considerado false)
 
 // //Estruturas condicionais
 
@@ -239,6 +238,8 @@ console.log(booleano); // Saída: false (0 é considerado false)
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+// let estrito;
+// console.log(estrito);
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
@@ -251,6 +252,8 @@ console.log(booleano); // Saída: false (0 é considerado false)
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+// let obj = { nome: "João", idade: 25, devedor: true };
+// console.log(obj.idade); 
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
@@ -278,101 +281,8 @@ console.log(booleano); // Saída: false (0 é considerado false)
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
+//Criando uma lista de usuários:
 
-
-//Inserindo a lista no localStorage se ela não existir;
-if(!localStorage.getItem("base-dados")){
-    //Criando uma lista de usuários:
-let listaUsuarios = [
-    {txtNm:"João das Couves",txtCpf:"12345678900", rdGen:"m", txtEmail:"jo@email.com",txtSenha:"123456"},
-    {txtNm:"Mario Willians",txtCpf:"08745342870", rdGen:"m", txtEmail:"ma@email.com",txtSenha:"123456"},
-    {txtNm:"Luna Chaves",txtCpf:"45900654398", rdGen:"f", txtEmail:"lu@email.com",txtSenha:"123456"},
-    {txtNm:"Tony Beto",txtCpf:"126890678675", rdGen:"m", txtEmail:"to@email.com",txtSenha:"123456"},
-    {txtNm:"Deliz Ribeiro",txtCpf:"62345698712", rdGen:"f", txtEmail:"de@email.com",txtSenha:"123456"},
-];
-    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
-} 
-
-
-
-const alteraVisao = (inputSenha)=>{
-    if(inputSenha.type == "password"){
-        inputSenha.setAttribute("type","text");
-    }else{
-        inputSenha.setAttribute("type","password");
-    }
-}
-
-
-let iconEye = document.querySelector("i");
-iconEye.addEventListener('click', function(){
-    
-    let inputSenha = document.querySelector("#idSenha");
-
-    if(this.className == "fa-regular fa-eye-slash" ){
-        this.setAttribute("class","fa-regular fa-eye");
-        inputSenha.setAttribute("type","text");
-    }else{
-        this.setAttribute("class","fa-regular fa-eye-slash");
-        inputSenha.setAttribute("type","password");
-    }
-});
-
-function validaCampos(input1,input2) {
-   
-
-    //Recuperando a base de dados do localStorage:
-    let listaUsuarios = JSON.parse(localStorage.getItem("base-dados"));
-
-    //Recuperando o elemento da msg do usuario.
-    const elMsg = document.querySelector(".valida");
-    
-    for (let x = 0; x < listaUsuarios.length; x++) {
-        if((listaUsuarios[x].txtEmail == input1.value) && (listaUsuarios[x].txtSenha == input2.value)){
-        if((listaUsuarios[x].txtEmail == input1.value) && (listaUsuarios[x].txtSenha == input2.value)){
-
-            //Criando um objeto no localStorage
-            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
-
-            const userToken = Math.random().toString(16).substring(2, 5)+Math.random().toString(16).substring(2, 5);
-
-            sessionStorage.setItem("token", userToken);
-           //Atribuir uma nova classe ao elemento de msg do usuario. 
-           elMsg.setAttribute("class","sucesso");
-           elMsg.innerText = "Login realizado com SUCESSSO!";
-
-           setTimeout(()=>{
-                elMsg.setAttribute("class","valida");
-                elMsg.innerText = "";
-                window.location.href = "../status/sucesso.html";
-           },3000);
-            return false; 
-        }
-    }
-}
-
-    elMsg.setAttribute("class","erro");
-    elMsg.innerText = "Nome de usuário ou senha incorretos!";
-   
-    return false;
-}
-
-
-//Recuperando o botão de login
-const btnLogin = document.querySelector("#login");
-//Recuperando o elemento dialog
- const modal = document.querySelector("dialog");
- //Atrelando um evento ao botão
- btnLogin.addEventListener("click", function(e){
-
-    // console.log(e.target.innerText);
-    modal.showModal();
-     
- });
-
- //Recuperando o botão de login
-const btnClose = document.querySelector("#close");
- //Atrelando um evento ao botão
-btnClose.addEventListener("click", function(e){
-    modal.close();
- });
+// let listaUsuarios = [
+//     {txtNm : "Joao", txtCpf : "4125735485", rdGen: "m", txtEmail:"joao@email.com", txtSenha:"123456"},
+// ];
