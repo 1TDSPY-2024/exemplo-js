@@ -278,17 +278,18 @@ console.log(booleano); // Saída: false (0 é considerado false)
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
-//Criando uma lista de usuários:
-// let listaUsuarios = [
-//     {txtNm:"João das Couves",txtCpf:"12345678900", rdGen:"m", txtEmail:"jo@email.com",txtSenha:"123456"},
-//     {txtNm:"Mario Willians",txtCpf:"08745342870", rdGen:"m", txtEmail:"ma@email.com",txtSenha:"123456"},
-//     {txtNm:"Luna Chaves",txtCpf:"45900654398", rdGen:"f", txtEmail:"lu@email.com",txtSenha:"123456"},
-//     {txtNm:"Tony Beto",txtCpf:"126890678675", rdGen:"m", txtEmail:"to@email.com",txtSenha:"123456"},
-//     {txtNm:"Deliz Ribeiro",txtCpf:"62345698712", rdGen:"f", txtEmail:"de@email.com",txtSenha:"123456"},
-// ];
+
 
 //Inserindo a lista no localStorage se ela não existir;
-if(localStorage.getItem("base-dados") == null){
+if(!localStorage.getItem("base-dados")){
+    //Criando uma lista de usuários:
+let listaUsuarios = [
+    {txtNm:"João das Couves",txtCpf:"12345678900", rdGen:"m", txtEmail:"jo@email.com",txtSenha:"123456"},
+    {txtNm:"Mario Willians",txtCpf:"08745342870", rdGen:"m", txtEmail:"ma@email.com",txtSenha:"123456"},
+    {txtNm:"Luna Chaves",txtCpf:"45900654398", rdGen:"f", txtEmail:"lu@email.com",txtSenha:"123456"},
+    {txtNm:"Tony Beto",txtCpf:"126890678675", rdGen:"m", txtEmail:"to@email.com",txtSenha:"123456"},
+    {txtNm:"Deliz Ribeiro",txtCpf:"62345698712", rdGen:"f", txtEmail:"de@email.com",txtSenha:"123456"},
+];
     localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
 } 
 
@@ -348,6 +349,7 @@ function validaCampos(input1,input2) {
             return false; 
         }
     }
+}
 
     elMsg.setAttribute("class","erro");
     elMsg.innerText = "Nome de usuário ou senha incorretos!";
