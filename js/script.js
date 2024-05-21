@@ -279,14 +279,20 @@ console.log(booleano); // Saída: false (0 é considerado false)
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
 
 //Criando uma lista de usuários:
+// let listaUsuarios = [
+//     {txtNm:"João das Couves",txtCpf:"12345678900", rdGen:"m", txtEmail:"jo@email.com",txtSenha:"123456"},
+//     {txtNm:"Mario Willians",txtCpf:"08745342870", rdGen:"m", txtEmail:"ma@email.com",txtSenha:"123456"},
+//     {txtNm:"Luna Chaves",txtCpf:"45900654398", rdGen:"f", txtEmail:"lu@email.com",txtSenha:"123456"},
+//     {txtNm:"Tony Beto",txtCpf:"126890678675", rdGen:"m", txtEmail:"to@email.com",txtSenha:"123456"},
+//     {txtNm:"Deliz Ribeiro",txtCpf:"62345698712", rdGen:"f", txtEmail:"de@email.com",txtSenha:"123456"},
+// ];
 
-let listaUsuarios = [
-    {emailUsuario:"joao@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"jose@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"joaquim@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"maria@email.com",senhaUsuario:"123456"},
-    {emailUsuario:"manoel@email.com",senhaUsuario:"123456"},
-];
+//Inserindo a lista no localStorage se ela não existir;
+if(localStorage.getItem("base-dados") == null){
+    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
+} 
+
+
 
 const alteraVisao = (inputSenha)=>{
     if(inputSenha.type == "password"){
@@ -313,11 +319,15 @@ iconEye.addEventListener('click', function(){
 
 function validaCampos(input1,input2) {
    
+
+    //Recuperando a base de dados do localStorage:
+    let listaUsuarios = JSON.parse(localStorage.getItem("base-dados"));
+
     //Recuperando o elemento da msg do usuario.
     const elMsg = document.querySelector(".valida");
     
     for (let x = 0; x < listaUsuarios.length; x++) {
-        if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+        if((listaUsuarios[x].txtEmail == input1.value) && (listaUsuarios[x].txtSenha == input2.value)){
 
             //Criando um objeto no localStorage
             localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
