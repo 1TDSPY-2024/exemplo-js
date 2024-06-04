@@ -20,21 +20,21 @@ const registraUsuario = (
     });
 
     const usuario = {
-      nome: inputNome.value,
-      cpf: inputCpf.value,
-      genero: inputGen.value,
-      email: inputEmail.value,
-      senha: inputSenha.value,
+      txtNm: inputNome.value,
+      txtCpf: inputCpf.value,
+      rdGen: inputGen.value,
+      txtEmail: inputEmail.value,
+      txtSenha: inputSenha.value,
     };
 
     //Recupera o banco do localStorage e adiciona o objeto na listaUsuários:
-    let listaUsuarios = JSON.parse(localStorage.getItem("banco-dados")) || [];
+    let listaUsuarios = JSON.parse(localStorage.getItem("base-dados")) || [];
 
     //Adicionando de fato o objeto na lista com o método push;
     listaUsuarios.push(usuario);
 
     //Adicionando a listaUsuarios novamente no LocalStorage:
-    localStorage.setItem("banco-dados", JSON.stringify(listaUsuarios));
+    localStorage.setItem("base-dados", JSON.stringify(listaUsuarios));
     
     return false;
   } else {
